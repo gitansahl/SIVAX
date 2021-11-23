@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "kode": "loc01",
+      "nama": "Rosemary Hospital Center",
+      "luas_ruangan": 349,
+      "no": "227",
+      "jalan": "Mangga Bl",
+      "kelurahan": "Rawa Buaya",
+      "kecamatan": "Cengkareng",
+      "kabkot": "DKI Jakarta"
+    },
+    {
+      "kode": "loc02",
+      "nama": "Memorial Medical Center",
+      "luas_ruangan": 316,
+      "no": "63",
+      "jalan": "Merdeka",
+      "kelurahan": "Tembalang",
+      "kecamatan": "Tembalang",
+      "kabkot": "Semarang"
+    },
+    {
+      "kode": "loc03",
+      "nama": "Pine Rest Community Hospital",
+      "luas_ruangan": 472,
+      "no": "52",
+      "jalan": "Jendral Basuki",
+      "kelurahan": "Joglo",
+      "kecamatan": "Kembangan",
+      "kabkot": "DKI Jakarta"
+    },
+    {
+      "kode": "loc04",
+      "nama": "Morningside Medical Center",
+      "luas_ruangan": 413,
+      "no": "210",
+      "jalan": "Gatot Subroto",
+      "kelurahan": "Kemanggisan",
+      "kecamatan": "Palmerah",
+      "kabkot": "DKI Jakarta"
+    },
+    {
+      "kode": "loc05",
+      "nama": "Heartstone Community Hospital",
+      "luas_ruangan": 301,
+      "no": "173",
+      "jalan": "Psr Turi",
+      "kelurahan": "Asemrowo",
+      "kecamatan": "Asemrowo",
+      "kabkot": "Surabaya"
+    },
+    {
+      "kode": "loc06",
+      "nama": "Pearl River Clinic",
+      "luas_ruangan": 417,
+      "no": "189",
+      "jalan": "Psr Blok M",
+      "kelurahan": "Glodok",
+      "kecamatan": "Tamansari",
+      "kabkot": "DKI Jakarta"
+    },
+    {
+      "kode": "loc07",
+      "nama": "Greengrass Medical Center",
+      "luas_ruangan": 133,
+      "no": "106",
+      "jalan": "MH Thamrin",
+      "kelurahan": "Banu",
+      "kecamatan": "Malalayang",
+      "kabkot": "Manado"
+    },
+    {
+      "kode": "loc08",
+      "nama": "Hot Springs Hospital Center",
+      "luas_ruangan": 414,
+      "no": "267",
+      "jalan": "Jend Sudirman",
+      "kelurahan": "Cikokol",
+      "kecamatan": "Tangerang",
+      "kabkot": "Tangerang"
+    },
+    {
+      "kode": "loc09",
+      "nama": "Fountain Valley Hospital",
+      "luas_ruangan": 452,
+      "no": "248",
+      "jalan": "Aria Putra ",
+      "kelurahan": "Klojen",
+      "kecamatan": "Klojen",
+      "kabkot": "Malang"
+    },
+    {
+      "kode": "loc010",
+      "nama": "Lowland General Hospital",
+      "luas_ruangan": 356,
+      "no": "39",
+      "jalan": "Proy Senen ",
+      "kelurahan": "Nusukan ",
+      "kecamatan": "Banjarsari",
+      "kabkot": "Surakarta"
+    }
+  ]
+}

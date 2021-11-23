@@ -1,0 +1,196 @@
+{
+  "data": [
+    {
+      "email_pegawai": "Sharyl.Pelosi@gmail.com",
+      "tgl_waktu": "2021-07-12T00:00:00",
+      "jumlah_update": 187,
+      "kode_vaksin": "vcn01"
+    },
+    {
+      "email_pegawai": "Gibb.Maud@gmail.com",
+      "tgl_waktu": "2021-05-21T00:00:00",
+      "jumlah_update": 495,
+      "kode_vaksin": "vcn01"
+    },
+    {
+      "email_pegawai": "Chilton.Scudders@gmail.com",
+      "tgl_waktu": "2021-04-25T00:00:00",
+      "jumlah_update": 500,
+      "kode_vaksin": "vcn01"
+    },
+    {
+      "email_pegawai": "Guido.Barnewelle@gmail.com",
+      "tgl_waktu": "2021-06-03T00:00:00",
+      "jumlah_update": 303,
+      "kode_vaksin": "vcn01"
+    },
+    {
+      "email_pegawai": "Israel.Belin@gmail.com",
+      "tgl_waktu": "2021-07-29T00:00:00",
+      "jumlah_update": 470,
+      "kode_vaksin": "vcn01"
+    },
+    {
+      "email_pegawai": "Gusty.Daddow@gmail.com",
+      "tgl_waktu": "2021-05-12T00:00:00",
+      "jumlah_update": 387,
+      "kode_vaksin": "vcn02"
+    },
+    {
+      "email_pegawai": "Tallie.Pepperrall@gmail.com",
+      "tgl_waktu": "2021-08-26T00:00:00",
+      "jumlah_update": 263,
+      "kode_vaksin": "vcn02"
+    },
+    {
+      "email_pegawai": "Sharyl.Pelosi@gmail.com",
+      "tgl_waktu": "2021-03-06T00:00:00",
+      "jumlah_update": 95,
+      "kode_vaksin": "vcn02"
+    },
+    {
+      "email_pegawai": "Kerstin.Dryburgh@gmail.com",
+      "tgl_waktu": "2021-04-16T00:00:00",
+      "jumlah_update": 390,
+      "kode_vaksin": "vcn02"
+    },
+    {
+      "email_pegawai": "Mike.Ricciardelli@gmail.com",
+      "tgl_waktu": "2021-07-17T00:00:00",
+      "jumlah_update": 422,
+      "kode_vaksin": "vcn03"
+    },
+    {
+      "email_pegawai": "Katya.Etheredge@gmail.com",
+      "tgl_waktu": "2021-03-08T00:00:00",
+      "jumlah_update": 7,
+      "kode_vaksin": "vcn03"
+    },
+    {
+      "email_pegawai": "Waylin.Wickendon@gmail.com",
+      "tgl_waktu": "2021-07-26T00:00:00",
+      "jumlah_update": 489,
+      "kode_vaksin": "vcn03"
+    },
+    {
+      "email_pegawai": "Sharyl.Pelosi@gmail.com",
+      "tgl_waktu": "2021-06-15T00:00:00",
+      "jumlah_update": 492,
+      "kode_vaksin": "vcn03"
+    },
+    {
+      "email_pegawai": "Daniel.Mattack@gmail.com",
+      "tgl_waktu": "2021-03-27T00:00:00",
+      "jumlah_update": 180,
+      "kode_vaksin": "vcn04"
+    },
+    {
+      "email_pegawai": "Lidia.Gaunt@gmail.com",
+      "tgl_waktu": "2021-06-12T00:00:00",
+      "jumlah_update": 200,
+      "kode_vaksin": "vcn04"
+    },
+    {
+      "email_pegawai": "Coleman.Scullard@gmail.com",
+      "tgl_waktu": "2021-04-08T00:00:00",
+      "jumlah_update": 200,
+      "kode_vaksin": "vcn04"
+    },
+    {
+      "email_pegawai": "Michell.Schapiro@gmail.com",
+      "tgl_waktu": "2021-03-11T00:00:00",
+      "jumlah_update": 211,
+      "kode_vaksin": "vcn04"
+    },
+    {
+      "email_pegawai": "Lura.Ditchburn@gmail.com",
+      "tgl_waktu": "2021-01-05T00:00:00",
+      "jumlah_update": 500,
+      "kode_vaksin": "vcn05"
+    },
+    {
+      "email_pegawai": "Danice.Ayshford@gmail.com",
+      "tgl_waktu": "2021-08-06T00:00:00",
+      "jumlah_update": 300,
+      "kode_vaksin": "vcn05"
+    },
+    {
+      "email_pegawai": "Rodd.McKinnon@gmail.com",
+      "tgl_waktu": "2021-04-26T00:00:00",
+      "jumlah_update": 550,
+      "kode_vaksin": "vcn05"
+    },
+    {
+      "email_pegawai": "Coleman.Scullard@gmail.com",
+      "tgl_waktu": "2021-03-13T00:00:00",
+      "jumlah_update": 50,
+      "kode_vaksin": "vcn04"
+    },
+    {
+      "email_pegawai": "Sharyl.Pelosi@gmail.com",
+      "tgl_waktu": "2021-05-18T00:00:00",
+      "jumlah_update": -931,
+      "kode_vaksin": "vcn01"
+    },
+    {
+      "email_pegawai": "Gibb.Maud@gmail.com",
+      "tgl_waktu": "2021-01-19T00:00:00",
+      "jumlah_update": -819,
+      "kode_vaksin": "vcn01"
+    },
+    {
+      "email_pegawai": "Katya.Etheredge@gmail.com",
+      "tgl_waktu": "2021-08-15T00:00:00",
+      "jumlah_update": -239,
+      "kode_vaksin": "vcn03"
+    },
+    {
+      "email_pegawai": "Lura.Ditchburn@gmail.com",
+      "tgl_waktu": "2021-04-30T00:00:00",
+      "jumlah_update": -782,
+      "kode_vaksin": "vcn05"
+    },
+    {
+      "email_pegawai": "Rodd.McKinnon@gmail.com",
+      "tgl_waktu": "2021-03-14T00:00:00",
+      "jumlah_update": -540,
+      "kode_vaksin": "vcn05"
+    },
+    {
+      "email_pegawai": "Tallie.Pepperrall@gmail.com",
+      "tgl_waktu": "2021-08-21T00:00:00",
+      "jumlah_update": -754,
+      "kode_vaksin": "vcn02"
+    },
+    {
+      "email_pegawai": "Daniel.Mattack@gmail.com",
+      "tgl_waktu": "2021-10-09T00:00:00",
+      "jumlah_update": -144,
+      "kode_vaksin": "vcn04"
+    },
+    {
+      "email_pegawai": "Sharyl.Pelosi@gmail.com",
+      "tgl_waktu": "2021-03-08T00:00:00",
+      "jumlah_update": -92,
+      "kode_vaksin": "vcn02"
+    },
+    {
+      "email_pegawai": "Lidia.Gaunt@gmail.com",
+      "tgl_waktu": "2021-05-07T00:00:00",
+      "jumlah_update": -514,
+      "kode_vaksin": "vcn04"
+    },
+    {
+      "email_pegawai": "Mike.Ricciardelli@gmail.com",
+      "tgl_waktu": "2021-02-10T00:00:00",
+      "jumlah_update": -758,
+      "kode_vaksin": "vcn03"
+    },
+    {
+      "email_pegawai": "Sharyl.Pelosi@gmail.com",
+      "tgl_waktu": "2021-11-21T17:29:06.499739",
+      "jumlah_update": -20,
+      "kode_vaksin": "vcn01"
+    }
+  ]
+}

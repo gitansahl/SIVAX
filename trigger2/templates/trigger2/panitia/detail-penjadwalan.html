@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Penjadwalan</title>
+  </head>
+  <body class="py-10 px-32 bg-purple-200">
+    <h1 class="text-center text-2xl font-bold">Detail Penjadwalan</h1>
+    {% comment %} create table {% endcomment %}
+    <div class="w-3/4 flex justify-center mx-auto py-32 pt-16">
+      <form action="POST">
+        <div class="flex my-2">
+          <div>Nama Instansi:</div>
+          <div>{{data.nama_instansi}}</div>
+        </div>
+        <div class="flex my-2">
+          <div>Tanggal dan waktu pelaksanaan:</div>
+          <div>{{data.waktu}}</div>
+        </div>
+        <div class="flex my-2">
+          <div>Kuota:</div>
+          <div>{{data.kuota}}</div>
+        </div>
+        <div class="flex my-2">
+          <div>Penerima:</div>
+          <div>{{data.kategori_penerima}}</div>
+        </div>
+        <div class="flex my-2">
+          <div>Lokasi Vaksin:</div>
+          <div>{{data.lokasi_vaksin}}</div>
+        </div>
+        <div class="flex my-2">
+          <div>Status:</div>
+          <div>{{data.status}}</div>
+        </div>
+        <div class="flex my-2">
+          <div>Jumlah Nakes:</div>
+          <div>{{data.jumlah_nakes}}</div>
+        </div>
+        <div class="flex my-2">
+          <div>Diverifikasi oleh:</div>
+          {% if 'setuju' in data.status %}
+          <div>{{data.email_admin}}</div>
+          {% endif %}
+        </div>
+        {% if data.biaya > 0 and data.jumlah_vaksin > 0 %}
+          <div>
+             <table class="table-fixed">
+      <thead>
+        <tr>
+          <th class="w-1/6 bg-pink-400">Kode</th>
+          <th class="w-1/4 bg-pink-400">Tanggal Distribusi</th>
+          <th class="w-1/6 bg-pink-400">Biaya</th>
+          <th class="w-1/4 bg-pink-400">Jenis Vaksin</th>
+          <th class="w-1/6 bg-pink-400">Jumlah</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-pink-200 text-center">
+          <td class="px-1 py-1.5">{{data.kode_distribusi}}</td>
+          <td class="px-1 py-1.5">{{ data.tanggal_distribusi }}</td>
+          <td class="px-1 py-1.5">{{ data.biaya }}</td>
+          <td class="px-1 py-1.5">{{ data.jenis_vaksin }}</td>
+          <td class="px-1 py-1.5">{{ data.jumlah_vaksin }}</td>
+        </tr>
+      </tbody>
+    </table>
+          </div>
+          {% endif %}
+        <br /><br />
+      </form>
+    </div>
+    {% comment %} end table {% endcomment %}
+  </body>
+</html>

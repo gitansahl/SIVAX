@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "kode": "vcn02",
+      "nama": "Astrazeneca",
+      "nama_produsen": "AstraZeneca",
+      "no_edar": "bpom-124",
+      "freq_suntik": 2,
+      "stok": 289
+    },
+    {
+      "kode": "vcn03",
+      "nama": "Sinopharm",
+      "nama_produsen": "Sinopharm",
+      "no_edar": "bpom-125",
+      "freq_suntik": 2,
+      "stok": 413
+    },
+    {
+      "kode": "vcn04",
+      "nama": "Moderna",
+      "nama_produsen": "Moderna Inc ",
+      "no_edar": "bpom-126",
+      "freq_suntik": 2,
+      "stok": 183
+    },
+    {
+      "kode": "vcn05",
+      "nama": "Pfizer",
+      "nama_produsen": "Pzifer",
+      "no_edar": "bpom-127",
+      "freq_suntik": 2,
+      "stok": 28
+    },
+    {
+      "kode": "vcn01",
+      "nama": "Sinovac",
+      "nama_produsen": "Sinovac Biotech",
+      "no_edar": "bpom-123",
+      "freq_suntik": 2,
+      "stok": 185
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+      "kode": "dst01",
+      "tanggal": "2021-09-18",
+      "biaya": 10000,
+      "jumlah_vaksin": 931,
+      "kode_vaksin": "vcn01",
+      "_kode": "vcn01",
+      "nama_vaksin": "Sinovac"
+    },
+    {
+      "kode": "dst02",
+      "tanggal": "2021-05-27",
+      "biaya": 15000,
+      "jumlah_vaksin": 819,
+      "kode_vaksin": "vcn01",
+      "_kode": "vcn01",
+      "nama_vaksin": "Sinovac"
+    },
+    {
+      "kode": "dst03",
+      "tanggal": "2021-04-24",
+      "biaya": 100000,
+      "jumlah_vaksin": 239,
+      "kode_vaksin": "vcn03",
+      "_kode": "vcn03",
+      "nama_vaksin": "Sinopharm"
+    },
+    {
+      "kode": "dst04",
+      "tanggal": "2021-04-06",
+      "biaya": 20000,
+      "jumlah_vaksin": 782,
+      "kode_vaksin": "vcn05",
+      "_kode": "vcn05",
+      "nama_vaksin": "Pfizer"
+    },
+    {
+      "kode": "dst05",
+      "tanggal": "2021-02-27",
+      "biaya": 25000,
+      "jumlah_vaksin": 540,
+      "kode_vaksin": "vcn05",
+      "_kode": "vcn05",
+      "nama_vaksin": "Pfizer"
+    },
+    {
+      "kode": "dst06",
+      "tanggal": "2021-06-22",
+      "biaya": 150000,
+      "jumlah_vaksin": 754,
+      "kode_vaksin": "vcn02",
+      "_kode": "vcn02",
+      "nama_vaksin": "Astrazeneca"
+    },
+    {
+      "kode": "dst07",
+      "tanggal": "2021-06-14",
+      "biaya": 200000,
+      "jumlah_vaksin": 144,
+      "kode_vaksin": "vcn04",
+      "_kode": "vcn04",
+      "nama_vaksin": "Moderna"
+    },
+    {
+      "kode": "dst08",
+      "tanggal": "2021-02-26",
+      "biaya": 300000,
+      "jumlah_vaksin": 92,
+      "kode_vaksin": "vcn02",
+      "_kode": "vcn02",
+      "nama_vaksin": "Astrazeneca"
+    },
+    {
+      "kode": "dst09",
+      "tanggal": "2021-09-13",
+      "biaya": 350000,
+      "jumlah_vaksin": 514,
+      "kode_vaksin": "vcn04",
+      "_kode": "vcn04",
+      "nama_vaksin": "Moderna"
+    },
+    {
+      "kode": "dst10",
+      "tanggal": "2021-07-22",
+      "biaya": 100000,
+      "jumlah_vaksin": 758,
+      "kode_vaksin": "vcn03",
+      "_kode": "vcn03",
+      "nama_vaksin": "Sinopharm"
+    },
+    {
+      "kode": "dst13",
+      "tanggal": "2021-11-21",
+      "biaya": 0,
+      "jumlah_vaksin": 0,
+      "kode_vaksin": "vcn01",
+      "_kode": "vcn01",
+      "nama_vaksin": "Sinovac"
+    },
+    {
+      "kode": "dst12",
+      "tanggal": "2021-11-21",
+      "biaya": 10000,
+      "jumlah_vaksin": 707,
+      "kode_vaksin": "vcn01",
+      "_kode": "vcn01",
+      "nama_vaksin": "Sinovac"
+    }
+  ]
+}

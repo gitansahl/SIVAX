@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Distribusi</title>
+  </head>
+  <body class="py-10 px-32 bg-purple-200">
+    <h1 class="text-center text-2xl font-bold">
+      Detail Distribusi untuk Penjadwalan Vaksin’
+    </h1>
+    {% comment %} create table {% endcomment %}
+    <div class="w-3/4 flex justify-center mx-auto pt-8">
+      <form action="POST">
+        <h3 class="text-lg font-bold">Informasi Penjadwalan</h3>
+        <div class="mt-2">
+          <label for="nama_instansi">Nama Instansi:</label>
+          <select disabled name="nama_instansi" id="nama_instansi">
+            {% for instansi in instansi_records %} {% if instansi.kode in selected.kode_instansi %}
+            <option selected value="{{instansi.kode}}">
+              {{instansi.nama_instansi}}
+            </option>
+            {% else %}
+            <option value="{{instansi.kode}}">
+              {{instansi.nama_instansi}}
+            </option>
+            {% endif %} {% endfor %}
+          </select>
+        </div>
+        <div>
+          <label for="tanggal_waktu">tanggal waktu:</label>
+          <input
+            disabled
+            type="date"
+            id="tanggal_waktu"
+            value="{{selected.waktu|slice:10}}"
+            name="tanggal_waktu"
+          />
+        </div>
+        <div>
+          <label for="kuota">kuota:</label>
+          <input
+            disabled
+            type="number"
+            id="kuota"
+            value="{{selected.kuota}}"
+            name="kuota"
+          />
+        </div>
+        <div>
+          <p>Tipe Penerima:</p>
+          {% if selected.kategori_penerima == 'umum' %}
+          <input
+            disabled
+            checked
+            type="radio"
+            id="opsi1"
+            name="penerima"
+            value="Umum"
+          />
+          <label for="opsi1">Umum</label><br />
+          <input
+            disabled
+            type="radio"
+            id="opsi2"
+            name="penerima"
+            value="Internal"
+          />
+          <label for="opsi2">Internal</label><br />
+          {% else %}
+          <input
+            disabled
+            type="radio"
+            id="opsi1"
+            name="penerima"
+            value="Umum"
+          />
+          <label for="opsi1">Umum</label><br />
+          <input
+            disabled
+            checked
+            type="radio"
+            id="opsi2"
+            name="penerima"
+            value="Internal"
+          />
+          <label for="opsi2">Internal</label><br />
+          {% endif %}
+        </div>
+        <div>
+          <label for="nama_instansi">Lokasi Vaksin:</label>
+          <select disabled name="nama_instansi" id="nama_instansi">
+            {% for lokasi in lokasi_records %} {% if lokasi.nama == selected.lokasi_vaksin %}
+            <option selected value="{{lokasi.kode}}">{{lokasi.nama}}</option>
+            {% else %}
+            <option value="{{lokasi.kode}}">{{lokasi.nama}}</option>
+            {% endif %} {% endfor %}
+          </select>
+        </div>
+        <div>
+          <label for="nakes">jumlah nakes:</label>
+          <input
+            disabled
+            type="number"
+            id="nakes"
+            value="{{selected.jumlah_nakes}}"
+            name="nakes"
+          />
+        </div>
+        <div>Diverifikasi oleh: {{selected.email_admin}}</div>
+        <br />
+        <h3 class="text-lg font-bold my-2">Informasi Distribusi</h3>
+        <div>
+          <label for="kode_distribusi">Kode Distribusi:</label>
+          <input
+            disabled
+            type="text"
+            id="kode_distribusi"
+            value="{{selected.kode_distribusi}}"
+            name="kode_distribusi"
+          />
+        </div>
+        <div>
+          <label for="tanggal_waktu_distribusi"
+            >tanggal waktu distribusi:</label
+          >
+          <input
+            disabled
+            type="date"
+            id="tanggal_waktu_distribusi"
+            value="{{selected.tanggal_distribusi|slice:10}}"
+            name="tanggal_waktu_distribusi"
+          />
+        </div>
+        <div>
+          <label for="biaya_distribusi">Biaya Distribusi:</label>
+          <input
+            disabled
+            value="{{selected.biaya}}"
+            type="number"
+            id="biaya_distribusi"
+            name="biaya_distribusi"
+          />
+        </div>
+        <div class="">
+          <label for="nama_vaksin">Jenis Vaksin:</label>
+          <select disabled name="nama_vaksin" id="nama_vaksin">
+            <option selected value="{{selected.jenis_vaksin}}">
+              {{selected.jenis_vaksin}}
+            </option>
+          </select>
+        </div>
+        <div>
+          <label for="jumlah_vaksin">Jumlah Vaksin:</label>
+          <input disabled type="number" id="jumlah_vaksin" value="{{selected.jumlah_vaksin}}" name="jumlah_vaksin" />
+        </div>
+      </form>
+    </div>
+    <div class="flex justify-center gap-x-4 w-full my-8">
+      <div class="rounded-md bg-green-400 font-bold px-4 py-2">
+        <a href={% url 'admin-distribusi-update' selected.kode_distribusi %} class=" font-bold"> Edit distribusi </a>
+      </div>
+      <div class="rounded-md bg-red-400 font-bold px-4 py-2">
+        Hapus Distribusi
+      </div>
+    </div>
+    {% comment %} end table {% endcomment %}
+  </body>
+</html>

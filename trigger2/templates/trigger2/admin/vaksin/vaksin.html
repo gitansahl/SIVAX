@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Vaksin</title>
+  </head>
+  <body class="py-10 px-32 bg-purple-200">
+    <h1 class="text-center text-2xl font-bold">‘Daftar Semua Vaksin’</h1>
+    {% comment %} create table {% endcomment %}
+    <table class="table-fixed capitalize mx-auto">
+      <h2 class="mb-2 mt-3 text-center">Role: Admin Satgas</h2>
+      <thead>
+        <tr>
+          <th class="w-1/12 bg-pink-400">kode</th>
+          <th class="w-2/12 bg-pink-400">nama</th>
+          <th class="w-2/12 bg-pink-400">produsen</th>
+          <th class="w-2/12 bg-pink-400">no edar</th>
+          <th class="w-1/12 bg-pink-400">freq suntikan</th>
+          <th class="w-1/6 bg-pink-400">stok</th>
+          <th class="w-1/6 bg-pink-400">action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for vaksin in vaksin_records %}
+        <tr class="bg-pink-200 text-center">
+          <td class="px-1 py-1.5">{{vaksin.kode}}</td>
+          <td class="px-1 py-1.5">{{ vaksin.nama }}</td>
+          <td class="px-1 py-1.5">{{ vaksin.nama_produsen }}</td>
+          <td class="px-1 py-1.5">{{ vaksin.no_edar }}</td>
+          <td class="px-1 py-1.5">{{vaksin.freq_suntik}}</td>
+          <td class="px-1 py-1.5">{{vaksin.stok}}</td>
+          <td class="px-1 py-1.5">
+            <a class="text-blue-500 block underline"> [Delete] </a>
+            <a href={% url 'admin-vaksin-update' vaksin.kode %} class="text-blue-500 block underline"> [Update Stok] </a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% comment %} end table {% endcomment %}
+  </body>
+</html>

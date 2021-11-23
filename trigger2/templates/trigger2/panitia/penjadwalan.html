@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Penjadwalan</title>
+  </head>
+  <body class="py-10 px-32 bg-purple-200">
+    <h1 class="text-center text-2xl font-bold">‘Daftar Penjadwalan Vaksin’</h1>
+        <h2>Role: Admin Satgas</h2>
+
+    <a href="{% url 'panitia-penjadwalan-create' %}" class="underline text-lg"> [ Tambah Penjadwalan ] </a>
+    {% comment %} create table {% endcomment %}
+    <table class="table-fixed">
+      <thead>
+        <tr>
+          <th class="w-1/4 bg-pink-400">nama instansi</th>
+          <th class="w-1/4 bg-pink-400">waktu</th>
+          <th class="w-1/12 bg-pink-400">kuota</th>
+          <th class="w-1/6 bg-pink-400">status</th>
+          <th class="w-1/12 bg-pink-400">kode distribusi</th>
+          <th class="w-1/6 bg-pink-400">action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for penjadwalan in penjadwalan_records %}
+        <tr class="bg-pink-200 text-center">
+          <td class="px-1 py-1.5">{{penjadwalan.nama_instansi}}</td>
+          <td class="px-1 py-1.5">{{ penjadwalan.waktu }}</td>
+          <td class="px-1 py-1.5">{{ penjadwalan.kuota }}</td>
+          <td class="px-1 py-1.5">{{ penjadwalan.status }}</td>
+          <td class="px-1 py-1.5">
+          {% if not penjadwalan.jumlah_vaksin == 0%}
+          {% if not penjadwalan.jumlah_vaksin == None %}
+                    {{ penjadwalan.kode_distribusi }}
+
+          {% endif %}
+          {% endif %}
+          </td>
+          <td class="px-1 py-1.5">
+          <div class="flex flex-col">
+            <a href={% url 'panitia-penjadwalan-detail' penjadwalan.kode_instansi penjadwalan.slug_waktu %} class="text-blue-500 underline block"> [Detail] </a>
+            {% if not 'setuju' in penjadwalan.status %}
+                        <a href={% url 'panitia-penjadwalan-update' penjadwalan.kode_instansi penjadwalan.slug_waktu %} class="text-blue-500 block underline"> [Update] </a>
+            {% endif %}
+          </div>
+
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% comment %} end table {% endcomment %}
+  </body>
+</html>

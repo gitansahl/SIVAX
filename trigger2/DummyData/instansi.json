@@ -1,0 +1,29 @@
+{
+  "data": [
+    { "kode": "D001", "nama_instansi": "Rumah Sakit Sehat" },
+    { "kode": "D002", "nama_instansi": "Rumah Sakit Melati" },
+    { "kode": "D003", "nama_instansi": "Rumah Sakit Juanda" },
+    { "kode": "D004", "nama_instansi": "PT Sosru" },
+    { "kode": "D005", "nama_instansi": "Rumah Sakit Adi Mulya" },
+    { "kode": "D006", "nama_instansi": "Rumah Sakit Pertemanan" },
+    { "kode": "D007", "nama_instansi": "Rumah Sakit Sejahtera" },
+    { "kode": "D008", "nama_instansi": "PT Unilevel" },
+    { "kode": "D009", "nama_instansi": "PT Cipto Indonesia" },
+    { "kode": "D010", "nama_instansi": "Rumah Sakit BPJS" },
+    { "kode": "D011", "nama_instansi": "Rumah Sakit Jakarta" },
+    { "kode": "D012", "nama_instansi": "Rumah Sakit Pertama" },
+    { "kode": "D013", "nama_instansi": "PT Jakarta Raya" },
+    { "kode": "D014", "nama_instansi": "Rumah Sakit UI" },
+    { "kode": "D015", "nama_instansi": "Rumah Sakit Umum Negeri" },
+    { "kode": "D016", "nama_instansi": "Rumah Sakit Merdeka" },
+    { "kode": "D017", "nama_instansi": "PT Dua Harimau" },
+    { "kode": "D018", "nama_instansi": "PT Bintang Pratama" },
+    { "kode": "D019", "nama_instansi": "RSU Fatmawati" },
+    { "kode": "D020", "nama_instansi": "RS Pusat Pertamina" },
+    { "kode": "D021", "nama_instansi": "Puskesmas Pondok Indah" },
+    { "kode": "D022", "nama_instansi": "Puskesmas Sakit Tebet" },
+    { "kode": "D023", "nama_instansi": "Puskesmas Siaga Raya" },
+    { "kode": "D024", "nama_instansi": "Klinik Agung Jakarta" },
+    { "kode": "D025", "nama_instansi": "Klinik Indah Medika" }
+  ]
+}

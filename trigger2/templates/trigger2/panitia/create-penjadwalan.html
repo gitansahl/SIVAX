@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Penjadwalan</title>
+  </head>
+  <body class="py-10 px-32 bg-purple-200">
+    <h1 class="text-center text-2xl font-bold">‘Buat Penjadwalan Vaksin’</h1>
+    {% comment %} create table {% endcomment %}
+    <div class="w-3/4 flex justify-center mx-auto py-32">
+      <form action="POST">
+        <div>
+          <label for="nama_instansi">Pilih Instansi:</label>
+          <select name="nama_instansi" id="nama_instansi">
+            {% for instansi in instansi_records %}
+            <option value="{{instansi.kode}}">
+              {{instansi.nama_instansi}}
+            </option>
+            {% endfor %}
+          </select>
+        </div>
+        <div>
+          <label for="tanggal_waktu">tanggal waktu:</label>
+          <input type="date" id="tanggal_waktu" name="tanggal_waktu" />
+        </div>
+        <div>
+          <label for="kuota">kuota:</label>
+          <input type="number" id="kuota" name="kuota" />
+        </div>
+        <div>
+          <p>Tipe Penerima:</p>
+          <input type="radio" id="opsi1" name="penerima" value="Umum" />
+          <label for="opsi1">Umum</label><br />
+          <input type="radio" id="opsi2" name="penerima" value="Internal" />
+          <label for="opsi2">Internal</label><br />
+        </div>
+        <div>
+          <label for="nama_instansi">Lokasi Vaksin:</label>
+          <select name="nama_instansi" id="nama_instansi">
+            {% for lokasi in lokasi_records %}
+            <option value="{{lokasi.kode}}">{{lokasi.nama}}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <br /><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    {% comment %} end table {% endcomment %}
+  </body>
+</html>

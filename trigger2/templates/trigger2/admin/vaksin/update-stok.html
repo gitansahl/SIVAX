@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Vaksin</title>
+  </head>
+  <body class="py-10 px-32 bg-purple-200">
+    <h1 class="text-center text-2xl font-bold">
+      ‘Update stok {{ nama_vaksin }}’
+    </h1>
+    {% comment %} create table {% endcomment %}
+    <table class="table-fixed capitalize mx-auto">
+      <h2 class="mb-2 mt-3 text-center">Role: Admin Satgas</h2>
+      <thead>
+        <tr>
+          <th class="w-2/5 bg-pink-400">Email Pegawai</th>
+          <th class="w-2/5 bg-pink-400">Tanggal Update</th>
+          <th class="w-1/5 bg-pink-400">Jumlah</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for update_stok in update_stok_records %}
+        <tr class="bg-pink-200 text-center">
+          <td class="px-1 py-1.5">{{ update_stok.email_pegawai }}</td>
+          <td class="px-1 py-1.5">{{ update_stok.tgl_waktu|slice:10 }}</td>
+          <td class="px-1 py-1.5">{{ update_stok.jumlah_update }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <form action="">
+      <div class="flex items-center justify-center gap-x-6 mt-6">
+        <div>
+          <label for="jumlah" class="text-lg"> jumlah update: </label>
+          <input type="number" name="jumlah" id="jumlah" />
+        </div>
+        <div class="bg-green-400 font-bold text-lg py-1.5 px-2">
+        Tambahkan update
+        </div>
+      </div>
+    </form>
+    {% comment %} end table {% endcomment %}
+  </body>
+</html>
