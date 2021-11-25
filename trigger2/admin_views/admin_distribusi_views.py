@@ -49,14 +49,12 @@ def extractOneDistribusiData(datum):
 class Distribusi(View):
     def get(self, request):
         data = getDummyData('distribusi.json')['data']
-        # print(data)
         response={}
         contexts = []
         for datum in data:
             context = extractOneDistribusiData(datum)
             contexts.append(context)
         response['distribusi_records'] = contexts
-        print(contexts)
         return render(request, 'trigger2/admin/distribusi/distribusi.html', response)
 
 class UpdateDistribusi(View):
@@ -65,7 +63,6 @@ class UpdateDistribusi(View):
         response['instansi_records'] = getDummyData('instansi.json')['data']
         response['lokasi_records']= getDummyData('lokasi_vaksin.json')['data']
         response['vaksin_records']=getDummyData('vaksin.json')['data']
-        print(response['vaksin_records'])
 
         data = getDummyData('penjadwalan_v2.json')['data']
         kode_distribusi = kwargs['kode_distribusi']

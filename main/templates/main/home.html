@@ -1,11 +1,58 @@
-{% extends 'base.html' %}
-{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+  </head>
+  <body class="">
+    <h1>Sivac Basdat B08</h1>
+    <br />
+    <table class="">
+      <thead>
+        <tr>
+          <th>No Trigger</th>
+          <th class="">No Fitur</th>
+          <th class="">Nama Fitur</th>
+          <th class="">Link</th>
+          <th>Penanggung Jawab</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="">
+          <td>2</td>
+          <td class="">3</td>
+          <td class="">CRU Penjadwalan</td>
+          <td class="">
+            <div></div>
+            <a href="{% url 'panitia-penjadwalan' %}">[Panitia] </a>
+            <a href="{% url 'admin-penjadwalan' %}"> [Admin]</a>
+          </td>
+          <td>Zidan Kharisma Adidarma (2006463881)</td>
+        </tr>
+        <tr class="">
+          <td>2</td>
 
-{% block meta %}
-<title>Hello, world!</title>
-{% endblock meta %}
+          <td class="">4</td>
+          <td class="">CRUD Distribusi</td>
+          <td class="">
+            <a href="{% url 'admin-distribusi' %}">[Admin]</a>
+          </td>
+          <td>Zidan Kharisma Adidarma (2006463881)</td>
+        </tr>
+        <tr class="">
+          <td>2</td>
 
-{% block content %}
-  <h1>Hello, world!</h1>
-  <p><img src="{% static 'img/django-logo-negative.svg' %}"></p>
-{% endblock content %}
+          <td class="">5</td>
+          <td class="">RU Vaksin</td>
+          <td class="">
+            <a href="{% url 'admin-vaksin' %}">[Admin]</a>
+          </td>
+          <td>Zidan Kharisma Adidarma (2006463881)</td>
+        </tr>
+      </tbody>
+    </table>
+    {% comment %} end table {% endcomment %}
+  </body>
+</html>
