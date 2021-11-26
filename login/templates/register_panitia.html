@@ -51,7 +51,7 @@
         <label for="tidak" class="field-label">Tidak</label><br>
       </div>
     </div>
-    <div id='tenaga_kesehatan' class="info-nakes">
+    <div id='tenaga_kesehatan' class="d-none">
       <div class='form-group row'>
         <label for="inputNoSTR" class='col-sm-2 col-form-label'>Nomor STR:</label>
         <div class='col-sm-10'>
@@ -146,12 +146,12 @@
     function nonTenagaKesehatan(){
         var nonTenaga = document.getElementById("tenaga_kesehatan")
         console.log("AAAA");
-        nonTenaga.classList.add('info-nakes');
+        nonTenaga.classList.add('d-none');
     }
     function tenagaKesehatan(){
         var nonTenaga = document.querySelector("#tenaga_kesehatan")
-        console.log("AAAA");
-        nonTenaga.classList.remove('info-nakes');
+        console.log("BBBB");
+        nonTenaga.classList.remove('d-none');
     }
 </script>
 {% endblock scripts %}
