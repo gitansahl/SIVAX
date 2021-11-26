@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+{% block meta %}
+  <title>Registrasi Panitia Penyelenggara</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+{% endblock meta %}
+{% block content %}
+<style>
+  .row {
+    padding-top:2px
+  }
+</style>
+<h2 class='text-center pt-3'> Registrasi Panitia Penyelenggara</h2>
+<form action="/login">
+  <div class='container mx-auto'>
+    <div class='row'>
+      <h6 class='col text-center my-3'>Informasi Akun</h3>
+    </div>
+    <div class='form-group row'>
+      <label for="inputEmail" class='col-sm-2 col-form-label'>Email:</label>
+      <div class='col-sm-10'>
+        <input type="text" id='inputEmail' class='form-control' placeholder="E-mail" required>
+      </div>
+    </div>
+    <div class='form-group row'>
+      <label for="inputPass" class='col-sm-2 col-form-label'>Password:</label>
+      <div class='col-sm-10'>
+        <input type="text" id='inputPass' class='form-control' placeholder="Password" requires>
+      </div>
+    </div>
+    <div class='form-group row'>
+      <label for="inputNoHP" class='col-sm-2 col-form-label'>No. HP:</label>
+      <div class='col-sm-10'>
+        <input type="text" id='inputNoHP' class='form-control' placeholder="No. HP" requires>
+      </div>
+    </div>
+    <div class='row'>
+      <h6 class='col text-center my-3'>Informasi Panitia</h3>
+    </div>
+    <div class='form-group row'>
+      <label for="inputNamaPanjang" class='col-sm-2 col-form-label'>Nama Panjang:</label>
+      <div class='col-sm-10'>
+        <input type="text" id='inputNamaPanjang' class='form-control' placeholder="Nama Panjang" requires>
+      </div>
+    </div>
+    <div class='form-group row'>
+      <label for="inputNakes" class='col-sm-2 col-form-label'>Tenaga Kesehatan</label>
+      <div class='col-sm-10'>
+        <input type="radio" id="ya" name="tenaga_kesehatan" value="YA" onClick=tenagaKesehatan() required>
+        <label for="ya" class="field-label">Ya</label><br>
+        <input type="radio" id="tidak" name="tenaga_kesehatan" value="TIDAK" onClick=nonTenagaKesehatan() required>
+        <label for="tidak" class="field-label">Tidak</label><br>
+      </div>
+    </div>
+    <div id='tenaga_kesehatan' class="info-nakes">
+      <div class='form-group row'>
+        <label for="inputNoSTR" class='col-sm-2 col-form-label'>Nomor STR:</label>
+        <div class='col-sm-10'>
+          <input type="text" id='inputNoSTR' class='form-control' placeholder="Nomor STR" requires>
+        </div>
+      </div>
+      <div class='form-group row'>
+        <label for="inputTipePetugas" class='col-sm-2 col-form-label'>Tipe Petugas:</label>
+        <div class='col-sm-10'>
+          <input type="text" id='inputTipePetugas' class='form-control' placeholder="Tipe Petugas" requires>
+        </div>
+      </div>
+    </div>
+    <div class='row'>
+      <h6 class='col text-center my-3'>Alamat</h3>
+    </div>
+    <div class='form-group row'>
+      <label for="inputNoBangunan" class='col-sm-2 col-form-label'>No. Bangunan:</label>
+      <div class='col-sm-10'>
+        <input type="text" id='inputNoBangunan' class='form-control' placeholder="Nomor Bangunan" required>
+      </div>
+    </div>
+    <div class='form-group row'>
+      <label for="inputNamaJalan" class='col-sm-2 col-form-label'>Nama Jalan:</label>
+      <div class='col-sm-10'>
+        <input type="text" id='inputNamaJalan' class='form-control' placeholder="Nama Jalan" requires>
+      </div>
+    </div>
+    <div class='form-group row'>
+      <label for="inputKelurahan" class='col-sm-2 col-form-label'>Kelurahan:</label>
+      <div class='col-sm-10'>
+        <input type="text" id='inputKelurahan' class='form-control' placeholder="Kelurahan" requires>
+      </div>
+    </div>
+    <div class='form-group row'>
+      <label for="inputKecamatan" class='col-sm-2 col-form-label'>Kecamatan:</label>
+      <div class='col-sm-10'>
+        <input type="text" id='inputKecamatan' class='form-control' placeholder="Kecamatan" requires>
+      </div>
+    </div>
+    <div class='form-group row'>
+      <label for="inputKabKota" class='col-sm-2 col-form-label'>Kab/Kota:</label>
+      <div class='col-sm-10'>
+        <input type="text" id='inputKab/Kota' class='form-control' placeholder="Kab/Kota" requires>
+      </div>
+    </div>
+    <div class='row'>
+      <h6 class='col text-center my-3'>Afiliasi</h3>
+    </div>
+    <div class='form-group row'>
+      <label for="inputAfiliasi" class='col-sm-2 col-form-label'>Instansi:</label>
+      <div class='col-sm-10'>
+        <select name="instansi" id="inputAfiliasi" class='form-control'>
+          <option value="" selected>Instansi...</option>
+          <option value="">Rumah Sakit Sehat</option>
+          <option value="">Rumah Sakit Melati</option>
+          <option value="">Rumah Sakit Juanda</option>
+          <option value="">PT Sosru</option>
+          <option value="">Rumah Sakit Adi Mulya</option>
+          <option value="">Rumah Sakit Pertemanan</option>
+          <option value="">Rumah Sakit Sejahtera</option>
+          <option value="">PT Unilevel</option>
+          <option value="">PT Cipto Indonesia</option>
+          <option value="">Rumah Sakit BPJS</option>
+          <option value="">Rumah Sakit Jakarta</option>
+          <option value="">Rumah Sakit Pertama</option>
+          <option value="">PT Jakarta Raya</option>
+          <option value="">Rumah Sakit UI</option>
+          <option value="">Rumah Sakit Umum Negeri</option>
+          <option value="">Rumah Sakit Merdeka</option>
+          <option value="">PT Dua Harimau</option>
+          <option value="">PT Bintang Pratama</option>
+          <option value="">RSU Fatmawati</option>
+          <option value="">RS Pusat Pertamina</option>
+          <option value="">Puskesmas Pondok Indah</option>
+          <option value="">Puskesmas Sakit Tebet</option>
+          <option value="">Puskesmas Siaga Raya</option>
+          <option value="">Klinik Agung Jakarta</option>
+          <option value="">Klinik Indah Medika</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="d-grid gap-2 col-4 mx-auto py-3">
+    <button type="submit" class="btn btn-primary mt-3">Daftar</button>
+  </div>
+</form>
+{% endblock content %}
+{% block scripts %}
+{% include 'script.html' %}
+<script type="text/javascript">
+    function nonTenagaKesehatan(){
+        var nonTenaga = document.getElementById("tenaga_kesehatan")
+        console.log("AAAA");
+        nonTenaga.classList.add('info-nakes');
+    }
+    function tenagaKesehatan(){
+        var nonTenaga = document.querySelector("#tenaga_kesehatan")
+        console.log("AAAA");
+        nonTenaga.classList.remove('info-nakes');
+    }
+</script>
+{% endblock scripts %}
+
