@@ -1,0 +1,604 @@
+{
+    "data": [
+    {
+        "email": "Gunter.Barclay@gmail.com",
+        "no_telp": "081199447066",
+        "password": "hereafter",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Megen.DeMinico@gmail.com",
+        "no_telp": "081153039743",
+        "password": "underbelly",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Nelie.Rosoman@gmail.com",
+        "no_telp": "081903567669",
+        "password": "housetop",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Gwyneth.Seely@gmail.com",
+        "no_telp": "081417995907",
+        "password": "passport",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Berget.Henmarsh@gmail.com",
+        "no_telp": "081671811525",
+        "password": "grasshopper",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Warren.Giacoboni@gmail.com",
+        "no_telp": "081305870613",
+        "password": "firecracker",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Stefania.Eddleston@gmail.com",
+        "no_telp": "081560345973",
+        "password": "sandlot",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Kamilah.Baptiste@gmail.com",
+        "no_telp": "08179768348",
+        "password": "foreleg",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Tracee.Rodder@gmail.com",
+        "no_telp": "081532109156",
+        "password": "supertanker",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Anthia.Toulamain@gmail.com",
+        "no_telp": "081703059287",
+        "password": "airfield",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Jocelyne.Spensly@gmail.com",
+        "no_telp": "081415059714",
+        "password": "softball",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Clareta.Branno@gmail.com",
+        "no_telp": "081429542106",
+        "password": "honeybee",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Erna.Guymer@gmail.com",
+        "no_telp": "081911962869",
+        "password": "upstate",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Merci.Belitz@gmail.com",
+        "no_telp": "081926326621",
+        "password": "sharecropper",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Hebert.Embery@gmail.com",
+        "no_telp": "081982492117",
+        "password": "repairman",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Sara-ann.Bayston@gmail.com",
+        "no_telp": "081743523791",
+        "password": "backtrack",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Marlane.Saladin@gmail.com",
+        "no_telp": "081951150928",
+        "password": "washcloth",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Hollie.Titcomb@gmail.com",
+        "no_telp": "081495646784",
+        "password": "daybreak",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Larisa.Peeter@gmail.com",
+        "no_telp": "081506607179",
+        "password": "whatever",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Serena.Ebbage@gmail.com",
+        "no_telp": "081305597587",
+        "password": "eyewitness",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Goddart.Sibbert@gmail.com",
+        "no_telp": "081813645614",
+        "password": "honeymoon",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Haven.Lipsett@gmail.com",
+        "no_telp": "08115813409",
+        "password": "uppercase",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Kitti.Murison@gmail.com",
+        "no_telp": "081345533440",
+        "password": "earthward",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Lynda.Dimitriades@gmail.com",
+        "no_telp": "081227324228",
+        "password": "tapeworm",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Geraldine.Stormont@gmail.com",
+        "no_telp": "081423039654",
+        "password": "lukewarm",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Derrek.Gilbertson@gmail.com",
+        "no_telp": "081589776290",
+        "password": "timeshare",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Jacquie.Pidgley@gmail.com",
+        "no_telp": "081762273753",
+        "password": "somebody",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Tova.Lude@gmail.com",
+        "no_telp": "081200239467",
+        "password": "stoplight",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Nerissa.Leatherborrow@gmail.com",
+        "no_telp": "081251230136",
+        "password": "telltale",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Skyler.Blaxter@gmail.com",
+        "no_telp": "081227456446",
+        "password": "shortbread",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Caty.Fazakerley@gmail.com",
+        "no_telp": "081895629493",
+        "password": "backspin",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Jami.Luparto@gmail.com",
+        "no_telp": "081293467641",
+        "password": "blackball",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Thom.McWhorter@gmail.com",
+        "no_telp": "081641865485",
+        "password": "airplane",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Uri.McDoual@gmail.com",
+        "no_telp": "081995279146",
+        "password": "fireflies",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Wallache.Antonignetti@gmail.com",
+        "no_telp": "081873355950",
+        "password": "crewcut",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Dewitt.Davana@gmail.com",
+        "no_telp": "081351788859",
+        "password": "carpool",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Amby.Soares@gmail.com",
+        "no_telp": "081330241722",
+        "password": "backstage",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Ray.Killoran@gmail.com",
+        "no_telp": "081483252102",
+        "password": "airlift",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Goraud.Hillyatt@gmail.com",
+        "no_telp": "081105142702",
+        "password": "timesaving",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Christophe.Broadberrie@gmail.com",
+        "no_telp": "081828813254",
+        "password": "tailpiece",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Britni.Akhurst@gmail.com",
+        "no_telp": "0815155221",
+        "password": "nightfall",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Dyane.Growden@gmail.com",
+        "no_telp": "081304460111",
+        "password": "fishmonger",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Courtney.Huguet@gmail.com",
+        "no_telp": "081896110523",
+        "password": "widespread",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Ella.Meni@gmail.com",
+        "no_telp": "08162209820",
+        "password": "snowbird",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Gery.Jewar@gmail.com",
+        "no_telp": "081345010438",
+        "password": "grandstand",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Revkah.Busch@gmail.com",
+        "no_telp": "081100380268",
+        "password": "shadyside",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Hermine.Rydeard@gmail.com",
+        "no_telp": "081151330371",
+        "password": "standby",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Sholom.Giraldez@gmail.com",
+        "no_telp": "081351497873",
+        "password": "dairymaid",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Moses.Nicholas@gmail.com",
+        "no_telp": "081873875305",
+        "password": "upcoming",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Mollee.Heinemann@gmail.com",
+        "no_telp": "081413165058",
+        "password": "upkeep",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Joyous.Perazzo@gmail.com",
+        "no_telp": "081582194501",
+        "password": "firewater",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Latrina.Barge@gmail.com",
+        "no_telp": "081538221222",
+        "password": "crosswalk",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Hermine.Dibbin@gmail.com",
+        "no_telp": "081662634510",
+        "password": "forklift",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Osmond.Steed@gmail.com",
+        "no_telp": "081112580182",
+        "password": "tabletop",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Jacquelynn.Alywen@gmail.com",
+        "no_telp": "081887334757",
+        "password": "carfare",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Joachim.Jina@gmail.com",
+        "no_telp": "081217574375",
+        "password": "passbook",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Lesly.Skates@gmail.com",
+        "no_telp": "081693338180",
+        "password": "horseman",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Domenic.Chooter@gmail.com",
+        "no_telp": "081361669700",
+        "password": "coffeemaker",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Marice.Menego@gmail.com",
+        "no_telp": "081904501288",
+        "password": "cabdriver",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Lauri.Rubi@gmail.com",
+        "no_telp": "081904685632",
+        "password": "watershed",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Fair.Matisoff@gmail.com",
+        "no_telp": "081655965782",
+        "password": "blueprint",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Jayme.Lucia@gmail.com",
+        "no_telp": "081956655030",
+        "password": "sandlot",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Jeane.Girardey@gmail.com",
+        "no_telp": "08120306672",
+        "password": "therefore",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Susanne.Bertelmot@gmail.com",
+        "no_telp": "0814780391",
+        "password": "shipbottom",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Sharyl.Pelosi@gmail.com",
+        "no_telp": "081768757798",
+        "password": "turnabout",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Gibb.Maud@gmail.com",
+        "no_telp": "081531491155",
+        "password": "superhighways",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Chilton.Scudders@gmail.com",
+        "no_telp": "081466666461",
+        "password": "washtub",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Guido.Barnewelle@gmail.com",
+        "no_telp": "081267231902",
+        "password": "comeback",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Israel.Belin@gmail.com",
+        "no_telp": "081177161945",
+        "password": "eyesight",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Gusty.Daddow@gmail.com",
+        "no_telp": "081530031835",
+        "password": "taskmaster",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Tallie.Pepperrall@gmail.com",
+        "no_telp": "081680856003",
+        "password": "sixfold",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Bernarr.Danielsohn@gmail.com",
+        "no_telp": "081115235745",
+        "password": "forewarn",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Kerstin.Dryburgh@gmail.com",
+        "no_telp": "081659320437",
+        "password": "keyboard",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Mike.Ricciardelli@gmail.com",
+        "no_telp": "081484137311",
+        "password": "anyplace",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Katya.Etheredge@gmail.com",
+        "no_telp": "081532085294",
+        "password": "taxpayer",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Waylin.Wickendon@gmail.com",
+        "no_telp": "081266578643",
+        "password": "sunroof",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Mirabelle.Hum@gmail.com",
+        "no_telp": "081924241465",
+        "password": "daisywheel",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Daniel.Mattack@gmail.com",
+        "no_telp": "081781386806",
+        "password": "uplift",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Lidia.Gaunt@gmail.com",
+        "no_telp": "08173363273",
+        "password": "grandfather",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Coleman.Scullard@gmail.com",
+        "no_telp": "081392968071",
+        "password": "firehouse",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Michell.Schapiro@gmail.com",
+        "no_telp": "081567759810",
+        "password": "waterworks",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Lura.Ditchburn@gmail.com",
+        "no_telp": "081466806074",
+        "password": "sandstone",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Danice.Ayshford@gmail.com",
+        "no_telp": "081667173877",
+        "password": "forearm",
+        "status_verifikasi": "belum terverifikasi"
+    },
+    {
+        "email": "Rodd.McKinnon@gmail.com",
+        "no_telp": "081290340781",
+        "password": "wavelength",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Cordie.Brunton@gmail.com",
+        "no_telp": "081887869013",
+        "password": "spacewalk",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Aggy.MacClinton@gmail.com",
+        "no_telp": "081426618554",
+        "password": "aboveboard",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Pattie.Tunuy@gmail.com",
+        "no_telp": "081782505467",
+        "password": "taillike",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Asa.Loddon@gmail.com",
+        "no_telp": "081586889399",
+        "password": "superman",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Dur.Penton@gmail.com",
+        "no_telp": "081452351192",
+        "password": "tablecloth",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Skippy.Nowaczyk@gmail.com",
+        "no_telp": "081232731029",
+        "password": "firearm",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Marianne.Riseam@gmail.com",
+        "no_telp": "081102012797",
+        "password": "deadline",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Romain.Dwyer@gmail.com",
+        "no_telp": "081232464586",
+        "password": "sharpshooter",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Gerick.Jahndel@gmail.com",
+        "no_telp": "081627772604",
+        "password": "playboy",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Thedrick.Matyja@gmail.com",
+        "no_telp": "081656552656",
+        "password": "foredoom",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Cherey.Milton@gmail.com",
+        "no_telp": "081270909475",
+        "password": "keypunch",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Emyle.Steptow@gmail.com",
+        "no_telp": "08162390189",
+        "password": "keyword",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Lani.Woodeson@gmail.com",
+        "no_telp": "081981458641",
+        "password": "handmade",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Joanne.Yurov@gmail.com",
+        "no_telp": "081354028087",
+        "password": "rainbow",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Brion.Vauls@gmail.com",
+        "no_telp": "081763793792",
+        "password": "schoolboy",
+        "status_verifikasi": "sudah terverifikasi"
+    },
+    {
+        "email": "Jaine.Coytes@gmail.com",
+        "no_telp": "081867356991",
+        "password": "boldface",
+        "status_verifikasi": "sudah terverifikasi"
+    }
+]
+}

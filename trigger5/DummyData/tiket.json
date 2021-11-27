@@ -1,0 +1,179 @@
+{
+    "data": [
+    {
+        "email": "Berget.Henmarsh@gmail.com",
+        "no_tiket": "tkt021",
+        "kode_instansi": "D015",
+        "kode_status": "04",
+        "tgl_waktu": "30/04/2021 9:34"
+    },
+    {
+        "email": "Berget.Henmarsh@gmail.com",
+        "no_tiket": "tkt022",
+        "kode_instansi": "D012",
+        "kode_status": "04",
+        "tgl_waktu": "18/05/2021 3:40"
+    },
+    {
+        "email": "Caty.Fazakerley@gmail.com",
+        "no_tiket": "tkt014",
+        "kode_instansi": "D018",
+        "kode_status": "02",
+        "tgl_waktu": "09/09/2021 14:27"
+    },
+    {
+        "email": "Clareta.Branno@gmail.com",
+        "no_tiket": "tkt08",
+        "kode_instansi": "D017",
+        "kode_status": "01",
+        "tgl_waktu": "21/08/2021 13:20"
+    },
+    {
+        "email": "Dewitt.Davana@gmail.com",
+        "no_tiket": "tkt06",
+        "kode_instansi": "D017",
+        "kode_status": "01",
+        "tgl_waktu": "21/08/2021 13:20"
+    },
+    {
+        "email": "Erna.Guymer@gmail.com",
+        "no_tiket": "tkt03",
+        "kode_instansi": "D015",
+        "kode_status": "01",
+        "tgl_waktu": "30/04/2021 9:34"
+    },
+    {
+        "email": "Geraldine.Stormont@gmail.com",
+        "no_tiket": "tkt01",
+        "kode_instansi": "D017",
+        "kode_status": "01",
+        "tgl_waktu": "21/08/2021 13:20"
+    },
+    {
+        "email": "Goddart.Sibbert@gmail.com",
+        "no_tiket": "tkt02",
+        "kode_instansi": "D013",
+        "kode_status": "01",
+        "tgl_waktu": "19/01/2021 16:52"
+    },
+    {
+        "email": "Goraud.Hillyatt@gmail.com",
+        "no_tiket": "tkt09",
+        "kode_instansi": "D013",
+        "kode_status": "02",
+        "tgl_waktu": "19/01/2021 16:52"
+    },
+    {
+        "email": "Gwyneth.Seely@gmail.com",
+        "no_tiket": "tkt023",
+        "kode_instansi": "D015",
+        "kode_status": "04",
+        "tgl_waktu": "30/04/2021 9:34"
+    },
+    {
+        "email": "Gwyneth.Seely@gmail.com",
+        "no_tiket": "tkt024",
+        "kode_instansi": "D012",
+        "kode_status": "04",
+        "tgl_waktu": "18/05/2021 3:40"
+    },
+    {
+        "email": "Haven.Lipsett@gmail.com",
+        "no_tiket": "tkt04",
+        "kode_instansi": "D021",
+        "kode_status": "01",
+        "tgl_waktu": "09/02/2021 20:56"
+    },
+    {
+        "email": "Hebert.Embery@gmail.com",
+        "no_tiket": "tkt025",
+        "kode_instansi": "D021",
+        "kode_status": "04",
+        "tgl_waktu": "09/02/2021 20:56"
+    },
+    {
+        "email": "Jacquie.Pidgley@gmail.com",
+        "no_tiket": "tkt010",
+        "kode_instansi": "D020",
+        "kode_status": "02",
+        "tgl_waktu": "07/05/2021 17:35"
+    },
+    {
+        "email": "Kamilah.Baptiste@gmail.com",
+        "no_tiket": "tkt019",
+        "kode_instansi": "D016",
+        "kode_status": "04",
+        "tgl_waktu": "14/03/2021 16:11"
+    },
+    {
+        "email": "Kamilah.Baptiste@gmail.com",
+        "no_tiket": "tkt020",
+        "kode_instansi": "D015",
+        "kode_status": "04",
+        "tgl_waktu": "30/04/2021 9:34"
+    },
+    {
+        "email": "Kitti.Murison@gmail.com",
+        "no_tiket": "tkt016",
+        "kode_instansi": "D017",
+        "kode_status": "04",
+        "tgl_waktu": "21/08/2021 13:20"
+    },
+    {
+        "email": "Larisa.Peeter@gmail.com",
+        "no_tiket": "tkt015",
+        "kode_instansi": "D014",
+        "kode_status": "02",
+        "tgl_waktu": "15/08/2021 2:53"
+    },
+    {
+        "email": "Lynda.Dimitriades@gmail.com",
+        "no_tiket": "tkt05",
+        "kode_instansi": "D016",
+        "kode_status": "01",
+        "tgl_waktu": "14/03/2021 16:11"
+    },
+    {
+        "email": "Merci.Belitz@gmail.com",
+        "no_tiket": "tkt017",
+        "kode_instansi": "D019",
+        "kode_status": "04",
+        "tgl_waktu": "07/03/2021 16:52"
+    },
+    {
+        "email": "Merci.Belitz@gmail.com",
+        "no_tiket": "tkt018",
+        "kode_instansi": "D015",
+        "kode_status": "04",
+        "tgl_waktu": "30/04/2021 9:34"
+    },
+    {
+        "email": "Moses.Nicholas@gmail.com",
+        "no_tiket": "tkt07",
+        "kode_instansi": "D019",
+        "kode_status": "01",
+        "tgl_waktu": "07/03/2021 16:52"
+    },
+    {
+        "email": "Nerissa.Leatherborrow@gmail.com",
+        "no_tiket": "tkt012",
+        "kode_instansi": "D020",
+        "kode_status": "03",
+        "tgl_waktu": "07/05/2021 17:35"
+    },
+    {
+        "email": "Sara-ann.Bayston@gmail.com",
+        "no_tiket": "tkt013",
+        "kode_instansi": "D018",
+        "kode_status": "02",
+        "tgl_waktu": "09/09/2021 14:27"
+    },
+    {
+        "email": "Tova.Lude@gmail.com",
+        "no_tiket": "tkt011",
+        "kode_instansi": "D014",
+        "kode_status": "03",
+        "tgl_waktu": "15/08/2021 2:53"
+    }
+]
+}

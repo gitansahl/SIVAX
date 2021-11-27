@@ -1,0 +1,19 @@
+{"data": [
+    {
+        "kode": "01",
+        "nama_status": "terdaftar"
+    },
+    {
+        "kode": "02",
+        "nama_status": "siap vaksin"
+    },
+    {
+        "kode": "03",
+        "nama_status": "tidak lolos screening"
+    },
+    {
+        "kode": "04",
+        "nama_status": "selesai vaksin"
+    }
+]
+}

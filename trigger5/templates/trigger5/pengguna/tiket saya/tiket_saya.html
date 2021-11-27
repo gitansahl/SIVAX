@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Tiket Vaksin</title>
+  </head>
+  <body class="py-10 px-32 bg-purple-200">
+    <h1 class="text-center text-2xl font-bold">Tiket Vaksin Pengguna</h1>
+    <h2>Role: Nakes</h2>
+    {% comment %} create table {% endcomment %}
+    <table class="table-fixed">
+      <thead>
+        <tr>
+            <th class="w-1/4 bg-pink-400">no</th>
+            <th class="w-1/4 bg-pink-400">nomor tiket</th>
+            <th class="w-1/12 bg-pink-400">instansi penyelenggara</th>
+            <th class="w-1/6 bg-pink-400">waktu pelaksanaan</th>
+            <th class="w-1/12 bg-pink-400">status tiket</th>
+            <th class="w-1/6 bg-pink-400">action</th>
+          </tr>
+      </thead>
+      <tbody>
+
+
+
+        {% for t in tiket %}
+        <tr class="bg-pink-200 text-center">
+          <td class="px-1 py-1.5">{{forloop.counter}}</td>
+          <td class="px-1 py-1.5">{{ tiket.no_tiket }}</td>
+          <td class="px-1 py-1.5">{{ tiket.nama_penerima }}</td>
+          <td class="px-1 py-1.5">{{ tiket.tgl_waktu }}</td>
+          <td class="px-1 py-1.5">{{ tiket.kode_status }}</td>
+          <td class="px-1 py-1.5">
+           
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% comment %} end table {% endcomment %}
+  </body>
+</html>
