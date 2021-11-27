@@ -29,7 +29,7 @@ class MainTestCase(TestCase):
         response = self.client.get('/')
         self.assertEqual(response.status_code, 200)
         # You can also use path names instead of explicit paths.
-        response = self.client.get(reverse('main:home'))
+        response = self.client.get(reverse('main:landing_page'))
         self.assertEqual(response.status_code, 200)
 
 
