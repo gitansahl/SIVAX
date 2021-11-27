@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
 
-def home(request):
+def distribusi_tugas(request):
     return render(request, 'main/home.html')
+def landing_page(request):
+    return render(request, 'main/landing_page.html')
