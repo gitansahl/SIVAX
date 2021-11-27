@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'trigger2',
     'login',
     'trigger4',
+    'trigger3',
 ]
 
 MIDDLEWARE = [
