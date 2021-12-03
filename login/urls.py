@@ -5,9 +5,9 @@ from . import views
 app_name = 'login'
 
 urlpatterns = [
-    path('login/', views.login, name='login'),
+    path('login/', views.LoginView.as_view(), name='login'),
     path('register/', views.register, name='registrasi'),
-    path('reg-warga/', views.register_warga, name='registrasi_warga'),
-    path('reg-panitia/', views.register_panitia, name="registrasi panitia"),
-    path('reg-admin/', views.register_admin, name='registrasi admin'),
+    path('reg-warga/', views.RegiterWargaView.as_view(), name='registrasi_warga'),
+    path('reg-panitia/', views.RegiterPanitiaView.as_view(), name="registrasi panitia"),
+    path('reg-admin/', views.RegiterAdminView.as_view(), name='registrasi admin'),
 ]
