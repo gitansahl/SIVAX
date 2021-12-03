@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
     'main',
     'trigger2',
     'trigger5',
@@ -102,10 +103,24 @@ WSGI_APPLICATION = 'sivax_b08.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+         'ENGINE': 'django.db.backends.postgresql',
+          'NAME': 'df17j8fehumijb',
+          'USER': 'tgrqmgsstamlqd',
+          'PASSWORD': '2bd62104c48facda68a3ef60b8dc221f8fea9851657b79eae5732a575bc16c5f',
+          'HOST': 'ec2-44-198-194-64.compute-1.amazonaws.com',
+          'PORT': '5432',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'postgres',
+#         'USER': 'postgres',
+#         'PASSWORD': 'postgres',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 
 # Set database settings automatically using DATABASE_URL.
 if PRODUCTION:

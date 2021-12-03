@@ -10,27 +10,31 @@
   }
 </style>
 <h2 class='text-center pt-3'> Registrasi Warga</h2>
-<form action="/login">
+{% if error %}
+<h5>{{ message }}</h5>
+{% endif %}
+<form action="" method="POST">
+  {% csrf_token %}
   <div class='container mx-auto'>
     <div class='row'>
       <h6 class='col text-center my-3'>Informasi Akun</h3>
     </div>
-    <div class='form-group row'>
+     <div class='form-group row'>
       <label for="inputEmail" class='col-sm-2 col-form-label'>Email:</label>
       <div class='col-sm-10'>
-        <input type="text" id='inputEmail' class='form-control' placeholder="E-mail" required>
+        <input name="email" type="text" id='inputEmail' class='form-control' placeholder="E-mail" required>
       </div>
     </div>
     <div class='form-group row'>
       <label for="inputPass" class='col-sm-2 col-form-label'>Password:</label>
       <div class='col-sm-10'>
-        <input type="text" id='inputPass' class='form-control' placeholder="Password" requires>
+        <input name="password" type="text" id='inputPass' class='form-control' placeholder="Password" requires>
       </div>
     </div>
     <div class='form-group row'>
       <label for="inputNoHP" class='col-sm-2 col-form-label'>No. HP:</label>
       <div class='col-sm-10'>
-        <input type="text" id='inputNoHP' class='form-control' placeholder="No. HP" requires>
+        <input type="text" name="hp" id='inputNoHP' class='form-control' placeholder="No. HP" requires>
       </div>
     </div>
     <div class='row'>
@@ -39,22 +43,22 @@
     <div class='form-group row'>
       <label for="inputNIK" class='col-sm-2 col-form-label'>NIK:</label>
       <div class='col-sm-10'>
-        <input type="text" id='inputNIK' class='form-control' placeholder="NIK" required>
+        <input name="nik" type="text" id='inputNIK' class='form-control' placeholder="NIK" required>
       </div>
     </div>
     <div class='form-group row'>
       <label for="inputNamaPanjang" class='col-sm-2 col-form-label'>Nama Panjang:</label>
       <div class='col-sm-10'>
-        <input type="text" id='inputNamaPanjang' class='form-control' placeholder="Nama Panjang" requires>
+        <input name="namaLengkap" type="text" id='inputNamaPanjang' class='form-control' placeholder="Nama Panjang" requires>
       </div>
     </div>
     <div class='form-group row'>
       <label for="inputJenisKelamin" class='col-sm-2 col-form-label'>Jenis Kelamin:</label>
       <div class='col-sm-10'>
-        <select name="jenis_kelamin" id="inputJenisKelamin" class='form-control'>
+        <select name="jenisKelamin" id="inputJenisKelamin" class='form-control'>
           <option value="" selected>Jenis Kelamin</option>
-          <option value="male">Laki-laki</option>
-          <option value="female">Perempuan</option>
+          <option value="m">Laki-laki</option>
+          <option value="f">Perempuan</option>
         </select>
       </div>
     </div>
@@ -64,31 +68,31 @@
     <div class='form-group row'>
       <label for="inputNoBangunan" class='col-sm-2 col-form-label'>No. Bangunan:</label>
       <div class='col-sm-10'>
-        <input type="text" id='inputNoBangunan' class='form-control' placeholder="Nomor Bangunan" required>
+        <input name="noBangunan" type="text" id='inputNoBangunan' class='form-control' placeholder="Nomor Bangunan" required>
       </div>
     </div>
     <div class='form-group row'>
       <label for="inputNamaJalan" class='col-sm-2 col-form-label'>Nama Jalan:</label>
       <div class='col-sm-10'>
-        <input type="text" id='inputNamaJalan' class='form-control' placeholder="Nama Jalan" requires>
+        <input name="namaJalan" type="text" id='inputNamaJalan' class='form-control' placeholder="Nama Jalan" requires>
       </div>
     </div>
     <div class='form-group row'>
       <label for="inputKelurahan" class='col-sm-2 col-form-label'>Kelurahan:</label>
       <div class='col-sm-10'>
-        <input type="text" id='inputKelurahan' class='form-control' placeholder="Kelurahan" requires>
+        <input name="kelurahan" type="text" id='inputKelurahan' class='form-control' placeholder="Kelurahan" requires>
       </div>
     </div>
     <div class='form-group row'>
       <label for="inputKecamatan" class='col-sm-2 col-form-label'>Kecamatan:</label>
       <div class='col-sm-10'>
-        <input type="text" id='inputKecamatan' class='form-control' placeholder="Kecamatan" requires>
+        <input name="kecamatan" type="text" id='inputKecamatan' class='form-control' placeholder="Kecamatan" requires>
       </div>
     </div>
     <div class='form-group row'>
       <label for="inputKabKota" class='col-sm-2 col-form-label'>Kab/Kota:</label>
       <div class='col-sm-10'>
-        <input type="text" id='inputKab/Kota' class='form-control' placeholder="Kab/Kota" requires>
+        <input name="kabkota" type="text" id='inputKab/Kota' class='form-control' placeholder="Kab/Kota" requires>
       </div>
     </div>
     <div class='row'>
@@ -99,31 +103,9 @@
       <div class='col-sm-10'>
         <select name="instansi" id="inputAfiliasi" class='form-control'>
           <option value="" selected>Instansi...</option>
-          <option value="">Rumah Sakit Sehat</option>
-          <option value="">Rumah Sakit Melati</option>
-          <option value="">Rumah Sakit Juanda</option>
-          <option value="">PT Sosru</option>
-          <option value="">Rumah Sakit Adi Mulya</option>
-          <option value="">Rumah Sakit Pertemanan</option>
-          <option value="">Rumah Sakit Sejahtera</option>
-          <option value="">PT Unilevel</option>
-          <option value="">PT Cipto Indonesia</option>
-          <option value="">Rumah Sakit BPJS</option>
-          <option value="">Rumah Sakit Jakarta</option>
-          <option value="">Rumah Sakit Pertama</option>
-          <option value="">PT Jakarta Raya</option>
-          <option value="">Rumah Sakit UI</option>
-          <option value="">Rumah Sakit Umum Negeri</option>
-          <option value="">Rumah Sakit Merdeka</option>
-          <option value="">PT Dua Harimau</option>
-          <option value="">PT Bintang Pratama</option>
-          <option value="">RSU Fatmawati</option>
-          <option value="">RS Pusat Pertamina</option>
-          <option value="">Puskesmas Pondok Indah</option>
-          <option value="">Puskesmas Sakit Tebet</option>
-          <option value="">Puskesmas Siaga Raya</option>
-          <option value="">Klinik Agung Jakarta</option>
-          <option value="">Klinik Indah Medika</option>
+          {% for key,value in instansis.items %}
+          <option value="{{key}}">{{value}}</option>
+          {% endfor %}
         </select>
       </div>
     </div>

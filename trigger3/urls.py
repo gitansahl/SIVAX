@@ -2,8 +2,6 @@ from django.urls import path
 
 from . import views
 
-app_name = 'trigger4'
-
 urlpatterns = [
     path('pengguna/tiket/create', views.create_tiket, name='create_tiket'),
     path('pengguna/tiket/detail', views.detail_jadwal_daftar, name='detail_jadwal_daftar'),
