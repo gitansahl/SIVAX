@@ -8,11 +8,11 @@
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <title>Tiket Vaksin</title>
+    <title>Kartu Vaksin</title>
   </head>
   <body class="py-10 px-32 bg-purple-200">
-    <h1 class="text-center text-2xl font-bold">Tiket Vaksin Pengguna</h1>
-    <h2>Role: Nakes</h2>
+    <h1 class="text-center text-2xl font-bold">Kartu Vaksin Pengguna</h1>
+    <h2>Role: Pengguna</h2>
     {% comment %} create table {% endcomment %}
     <table class="table-fixed">
       <thead>
@@ -26,16 +26,19 @@
       </thead>
       <tbody>
 
-
-
         {% for t in kartu_vaksin %}
         <tr class="bg-pink-200 text-center">
           <td class="px-1 py-1.5">{{forloop.counter}}</td>
           <td class="px-1 py-1.5">{{ t.no_sertifikat }}</td>
           <td class="px-1 py-1.5">{{ t.status_tahapan }}</td>
-          <td class="text-blue-500 block underline"> [Detail] </td>
-          <td class="px-1 py-1.5">
-           
+          <td class="text-blue-500 block underline"> 
+            <form class="row" action="{% url 'detail_kartu_vaksin' %}" method="get">
+              <input type="hidden" id="st" name="st" value="{{ t.status_tahapan }}">
+              <input type="hidden" id="ns" name="ns" value="{{ t.no_sertifikat }}">
+              <button type="submit" class="btn">Detail</button>
+             </form>
+          </td>
+        
         </tr>
         {% endfor %}
       </tbody>
