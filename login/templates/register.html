@@ -12,15 +12,16 @@
   }
 </style>
 <h1 class ='text-center mt-5 mb-5 px-5'>Pendaftaran Akun Sivax</h2>
-<form action="/" id="form-action">
+<form action="" method="POST" id="form-action">
+  {% csrf_token %}
   <div class="form-group d-grid gap-2 col-4 mx-auto">
     <label for="inputEmail3">Jenis Akun:</label>
     <div required>
-      <select id="jenis_akun" class="form-control" aria-label="Jenis Akun" required>
+      <select name="akun" id="jenis_akun" class="form-control" aria-label="Jenis Akun" required>
         <option value="" selected>Pilih jenis akun!</option>
-        <option value="warga">Warga</option>
-        <option value="panitia">Panitia Penyelenggara</option>
-        <option value="admin">Admin Satgas</option>
+        <option value="reg-warga">Warga</option>
+        <option value="reg-panitia">Panitia Penyelenggara</option>
+        <option value="reg-admin">Admin Satgas</option>
       </select>
     </div>
   </div>
