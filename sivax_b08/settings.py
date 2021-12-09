@@ -57,7 +57,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'trigger2',
-    'trigger5'
+    'trigger5',
     'login',
     'trigger4',
     'trigger3',
