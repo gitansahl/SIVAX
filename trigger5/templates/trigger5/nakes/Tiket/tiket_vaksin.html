@@ -30,17 +30,26 @@
 
 
 
-        {% for t in tiket %}
+        {% for t in tiket_vaksin %}
+
         <tr class="bg-pink-200 text-center">
           <td class="px-1 py-1.5">{{forloop.counter}}</td>
           <td class="px-1 py-1.5">{{ t.no_tiket }}</td>
-          <td class="px-1 py-1.5">{{ t.nama_penerima }}</td>
+          <td class="px-1 py-1.5">{{ t.nama_lengkap }}</td>
           <td class="px-1 py-1.5">{{ t.tgl_waktu }}</td>
-          <td class="px-1 py-1.5">{{ t.status_tiket }}</td>
-          <td class="text-blue-500 block underline"> [Detail] </td>
-          <td class="text-blue-500 block underline"> [Update] </td>
-          <td class="px-1 py-1.5">
-           
+          <td class="px-1 py-1.5">{{ t.nama_status }}</td>
+          <td class="text-blue-500 block underline"> 
+            <form class="row" action="{% url 'detail_tiket_vaksin' %}" method="get">
+              <input type="hidden" id="nt" name="nt" value="{{ t.no_tiket }}">
+              <button type="submit" class="btn">Detail</button>
+             </form>
+          {% if t.nama_status == 'terdaftar' or t.nama_status == 'siap vaksin' %}
+            <form class="row" action="{% url 'ubah_status_tiket' %}" method="get">
+                <input type="hidden" id="tn" name="tn" value="{{ t.no_tiket }}">
+                <button type="submit" class="btn">Ubah Status</button>
+            </form>
+          {% endif %}
+          </td>
         </tr>
         {% endfor %}
       </tbody>
