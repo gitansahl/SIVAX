@@ -37,7 +37,7 @@
           <td class="px-1 py-1.5">{{vaksin.stok}}</td>
           <td class="px-1 py-1.5">
             {% comment %} <button type='button' class='btn btn-danger' onclick="deleteVaksin()">Delete</button> {% endcomment %}
-            <a href={% url 'trigger4:delete_vaksin' vaksin.kode %} class="text-blue-500 block underline"> [Delete] </a>
+            <a href={% url 'admin-vaksin-delete' vaksin.kode %} class="text-blue-500 block underline"> [Delete] </a>
             <a href={% url 'admin-vaksin-update' vaksin.kode %} class="text-blue-500 block underline"> [Update Stok] </a>
           </td>
         </tr>

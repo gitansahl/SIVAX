@@ -187,10 +187,10 @@ def tambah_vaksin(request):
                                ('{kode_vaksin}', '{request.POST["nama_vaksin"]}', '{request.POST["produsen"]}',
                                '{request.POST["no_edar"]}', '{request.POST["stok"]}', '{request.POST["frekuensi"]}')
                                """)
+                return redirect("trigger2:admin-vaksin")
             except:
                 messages.add_message(request, messages.WARNING, f"Sistem sedang tidak baik-baik saja, mohon coba lain waktu")
             cursor.execute("set search_path to public")
-        return redirect("admin-vaksin")
     return render(request, 'trigger4/admin/tambah_vaksin.html', context)
 
 def delete_vaksin(request, kode):
@@ -203,4 +203,4 @@ def delete_vaksin(request, kode):
         except:
             messages.add_message(request, messages.WARNING, f"Gagal menghapus Vaksin {kode}")
             cursor.execute("SET search_path TO PUBLIC")
-        return redirect("admin-vaksin")
+        return redirect("trigger2:admin-vaksin")
