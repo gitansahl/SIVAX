@@ -18,7 +18,7 @@ def create_tiket(request, instansi, jadwal):
         if len(cursor.fetchall()) == 0:
             messages.add_message(request, messages.WARNING, "Registrasi sebagai warga dahulu sebelum mendaftar vaksinasi")
             cursor.execute("SET search_path TO PUBLIC")
-            return redirect("detail_jadwal", instansi, jadwal)
+            return redirect("trigger4:detail_jadwal", instansi, jadwal)
         cursor.execute(f"""
                        SELECT kode
                        FROM INSTANSI
@@ -36,9 +36,9 @@ def create_tiket(request, instansi, jadwal):
                            ('{email}', '{no_tiket}', '{kode_instansi}', 01, '{jadwal}')""")
         except:
             messages.add_message(request, messages.WARNING, "Anda sudah vaksin dosis ke-2 atau vaksin dosis pertama Anda masih dalam rentang waktu 14 hari ke belakang")
-            return redirect("detail_jadwal", instansi, jadwal)
+            return redirect("trigger4:detail_jadwal", instansi, jadwal)
         cursor.execute("SET search_path to public")
-    return redirect("trigger4:daftar_jadwal_terdaftar")
+    return redirect("trigger4:tiket_saya")
 
 def detail_jadwal(request, instansi, jadwal):
     with connection.cursor() as cursor:
