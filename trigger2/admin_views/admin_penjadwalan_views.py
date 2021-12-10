@@ -1,7 +1,8 @@
 from django.db import connection
-from django.http.response import Http404
+from django.http.response import Http404, HttpResponseRedirect
 from django.shortcuts import render
 from datetime import datetime, date
+from django.urls.base import reverse
 from django.views.generic.base import View
 from django.utils.text import slugify
 import json
@@ -79,4 +80,20 @@ class VerifikasiPenjadwalan(View):
         response['selected'] = context
 
         return render(request, 'trigger2/admin/penjadwalan/verifikasi-penjadwalan.html', response)
+    def post(self,request, *args, **kwargs):
+        print(request.POST)
+        instansi = kwargs['kode_instansi']
+        tanggal = kwargs['tanggal'][0:10]
+        email_admin = request.session['email']
+        x=request.POST
+        if x['setuju'] == 'YA':
+            msg = "pengajuan disetujui"
+        else:
+            msg = "pengajuan ditolak"
+        with connection.cursor() as cursor:
+            cursor.execute("set search_path to sivax")
+            cursor.execute("update penjadwalan set kode_instansi=%s, tanggal_waktu=%s, jumlah=%s, kategori_penerima=%s, kode_lokasi=%s, status=%s, email_admin=%s where kode_instansi=%s and tanggal_waktu::date = %s"
+            ,[x['nama_instansi'], x['tanggal_waktu'], x['kuota'], x['penerima'], x['lokasi_vaksin'],msg,email_admin, instansi, tanggal]
+            )
+        return HttpResponseRedirect(reverse('admin-penjadwalan'))
 

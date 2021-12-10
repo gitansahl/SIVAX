@@ -1,7 +1,8 @@
 from django.db import connection
-from django.http.response import Http404
+from django.http.response import Http404, HttpResponseRedirect
 from django.shortcuts import render
 from datetime import datetime, date
+from django.urls.base import reverse
 from django.views.generic.base import View
 from django.utils.text import slugify
 from trigger2.utils import getData
@@ -25,6 +26,12 @@ def extractOnePenjadwalanData(datum):
     context['jenis_vaksin']=datum['nama_vaksin']
     context['jumlah_vaksin'] = datum['jumlah_vaksin']
     return context
+
+def deleteVaksin(request, kode_vaksin):
+    print(kode_vaksin)
+    with connection.cursor() as cursor:
+        cursor.execute("delete from sivax.vaksin where kode=%s", [kode_vaksin])
+    return HttpResponseRedirect(reverse('admin-vaksin'))
 
 def index(request):
     response = {}
@@ -50,4 +57,15 @@ class UpdateStok(View):
             if vaksin['kode'].lower() == kode_vaksin.lower():
                 response['nama_vaksin']= vaksin['nama']
         return render(request, 'trigger2/admin/vaksin/update-stok.html', response)
+    
+    def post(self, request, *args, **kwargs):
+        idvaksn = kwargs['kode_vaksin']
+        jumlah_vaksin = request.POST['jumlah']
+        email = request.session['email']
+        tanggal = datetime.now()
+        print(tanggal)
+        with connection.cursor() as cursor:
+            cursor.execute("insert into sivax.update_stok values (%s, %s, %s, %s)",[email, tanggal, jumlah_vaksin, idvaksn])
+            cursor.execute("update sivax.vaksin set stok = stok + %s where kode=%s", [jumlah_vaksin, idvaksn])
+        return HttpResponseRedirect(reverse('admin-vaksin'))
 

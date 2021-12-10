@@ -36,7 +36,7 @@
           <td class="px-1 py-1.5">
             <a href={% url 'admin-distribusi-detail' distribusi.kode %} class="text-blue-500 block underline"> [Detail] </a>
             <a href={% url 'admin-distribusi-update' distribusi.kode %} class="text-blue-500 block underline"> [Update] </a>
-            <a class="text-blue-500 block underline"> [Delete] </a>
+            <a href={% url 'admin-distribusi-delete' distribusi.kode %} class="text-blue-500 block underline"> [Delete] </a>
           </td>
         </tr>
         {% endfor %}

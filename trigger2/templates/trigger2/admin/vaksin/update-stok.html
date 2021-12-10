@@ -28,21 +28,23 @@
         {% for update_stok in update_stok_records %}
         <tr class="bg-pink-200 text-center">
           <td class="px-1 py-1.5">{{ update_stok.email_pegawai }}</td>
-          <td class="px-1 py-1.5">{{ update_stok.tgl_waktu|slice:10 }}</td>
+          <td class="px-1 py-1.5">{{ update_stok.tgl_waktu }}</td>
           <td class="px-1 py-1.5">{{ update_stok.jumlah_update }}</td>
         </tr>
         {% endfor %}
       </tbody>
     </table>
-    <form action="">
-      <div class="flex items-center justify-center gap-x-6 mt-6">
+    <form action="" method="POST">
+      {% csrf_token %}      <div class="flex items-center justify-center gap-x-6 mt-6">
         <div>
           <label for="jumlah" class="text-lg"> jumlah update: </label>
           <input type="number" name="jumlah" id="jumlah" />
         </div>
-        <div class="bg-green-400 font-bold text-lg py-1.5 px-2">
-        Tambahkan update
-        </div>
+        <button type="submit">
+          <div class="bg-green-400 font-bold text-lg py-1.5 px-2">
+            Tambahkan update
+            </div>
+        </button>
       </div>
     </form>
     {% comment %} end table {% endcomment %}

@@ -14,8 +14,8 @@
     <h1 class="text-center text-2xl font-bold">Detail Penjadwalan</h1>
     {% comment %} create table {% endcomment %}
     <div class="w-3/4 flex justify-center mx-auto py-32 pt-16">
-      <form action="POST">
-        <div class="flex my-2">
+      <form action="" method="POST">
+        {% csrf_token %}        <div class="flex my-2">
           <div>Nama Instansi:</div>
           <div>{{data.nama_instansi}}</div>
         </div>

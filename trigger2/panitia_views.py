@@ -64,6 +64,13 @@ class CreatePenjadwalan(View):
         print("HEY")
         # print(response['lokasi_records'])
         return render(request, 'trigger2/panitia/create-penjadwalan.html', response)
+    def post(self, request):
+        print(request.POST)
+        x = request.POST
+        with connection.cursor() as cursor:
+            cursor.execute("insert into sivax.penjadwalan values (%s, %s,%s, %s, %s, %s, %s)", [x['nama_instansi'], x['tanggal_waktu'], int(x['kuota']), x['penerima'], "pengiriman dikirim", 0, x['lokasi_vaksin'] ])
+            print("success")
+        return HttpResponseRedirect(reverse('panitia-penjadwalan'))
 
 class UpdatePenjadwalan(View):
     def get(self, request, *args, **kwargs):
@@ -85,7 +92,14 @@ class UpdatePenjadwalan(View):
     def post(self, request, *args, **kwargs):
         print(kwargs)
         response={'hasError':False}
-        print(request.POST)
+        instansi = kwargs['kode_instansi']
+        tanggal = kwargs['tanggal'][0:10]
+        x=request.POST
+        print(x)
+        with connection.cursor() as cursor:
+            cursor.execute("update sivax.penjadwalan set kode_instansi=%s, tanggal_waktu=%s, jumlah=%s, kategori_penerima=%s, kode_lokasi=%s where kode_instansi=%s and tanggal_waktu::date = %s"
+            ,[x['nama_instansi'], x['tanggal_waktu'], x['kuota'], x['penerima'], x['lokasi_vaksin'], instansi, tanggal]
+            )
         return HttpResponseRedirect(reverse('panitia-penjadwalan'))
 
 

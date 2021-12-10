@@ -1,8 +1,9 @@
 from django.db import connection
 from django.http import response
-from django.http.response import Http404
+from django.http.response import Http404, HttpResponseRedirect
 from django.shortcuts import render
 from datetime import datetime, date
+from django.urls.base import reverse
 from django.views.generic.base import View
 from django.utils.text import slugify
 from trigger2.utils import getData
@@ -25,6 +26,7 @@ def extractOnePenjadwalanData(datum):
     context['biaya'] = datum['biaya']
     context['jenis_vaksin']=datum['nama_vaksin']
     context['jumlah_vaksin'] = datum['jumlah_vaksin']
+    context['kode_vaksin'] = datum['kode_vaksin']
     return context
 
 def extractOneDistribusiData(datum):
@@ -33,8 +35,14 @@ def extractOneDistribusiData(datum):
     context['tanggal'] = datum['tanggal']
     context['biaya'] = datum['biaya']
     context['nama_vaksin'] = datum['nama_vaksin']
+    context['kode_vaksin'] = datum['kode_vaksin']
     context['jumlah_vaksin'] = datum['jumlah_vaksin']
     return context
+
+def deleteDistribusi(request, kode_distribusi):
+    with connection.cursor() as cursor:
+        cursor.execute("delete from sivax.distribusi where kode=%s",[kode_distribusi])
+    return HttpResponseRedirect(reverse('admin-distribusi'))
 
 class Distribusi(View):
     def get(self, request):
@@ -53,15 +61,27 @@ class UpdateDistribusi(View):
         response['instansi_records'] = getData(connection, 'instansi')
         response['lokasi_records'] = getData(connection, 'lokasi')
         response['vaksin_records'] = getData(connection, 'vaksin')
+        print(response['vaksin_records'])
 
         data = getData(connection, 'penjadwalan')
         kode_distribusi = kwargs['kode_distribusi']
         for datum in data:
             if datum['kode_distribusi'] == kode_distribusi:
+                print(datum)
                 context = extractOnePenjadwalanData(datum)
         response['selected'] = context
+        # print(context)
 
         return render(request, 'trigger2/admin/distribusi/update-distribusi.html', response)
+    def post(self, request, *args, **kwargs):
+        kode_distribusi = kwargs['kode_distribusi']
+        x = request.POST
+        with connection.cursor() as cursor:
+            cursor.execute("set search_path to sivax")
+            cursor.execute("update sivax.distribusi set tanggal=%s, biaya=%s, jumlah_vaksin=%s, kode_vaksin=%s where kode=%s"
+            , [x['tanggal_waktu_distribusi'], x['biaya_distribusi'], x['jumlah_vaksin'], x['nama_vaksin'], kode_distribusi]
+            )
+        return HttpResponseRedirect(reverse('admin-distribusi'))
 
 class DetailDistribusi(View):
     def get(self, request, *args, **kwargs):
@@ -94,3 +114,15 @@ class DistribusiPenjadwalan(View):
         response['selected'] = context
 
         return render(request, 'trigger2/admin/distribusi/create-distribusi.html', response)
+
+    def post(self, request, *args, **kwargs):
+        print(request.POST)
+        x=request.POST
+
+        with connection.cursor() as cursor:
+            cursor.execute("set search_path to sivax")
+            cursor.execute("update distribusi set tanggal=%s, biaya=%s, jumlah_vaksin=%s, kode_vaksin=%s where kode=%s"
+            ,[x['tanggal_waktu_distribusi'], x['biaya_distribusi'], x['jumlah_vaksin'], x['nama_vaksin'], x['kode_distribusi']]
+            )
+            print("test")
+        return HttpResponseRedirect(reverse('admin-distribusi'))

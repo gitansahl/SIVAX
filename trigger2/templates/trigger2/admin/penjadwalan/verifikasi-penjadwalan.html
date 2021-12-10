@@ -14,8 +14,8 @@
     <h1 class="text-center text-2xl font-bold">Verifikasi Penjadwalan Vaksin’</h1>
     {% comment %} create table {% endcomment %}
     <div class="w-3/4 flex justify-center mx-auto py-32">
-      <form action="POST">
-        <div>
+      <form action="" method="POST">
+        {% csrf_token %}        <div>
           <label for="nama_instansi">Nama Instansi:</label>
           <select name="nama_instansi" id="nama_instansi">
             {% for instansi in instansi_records %} {% if instansi.kode in selected.kode_instansi %}
@@ -68,8 +68,8 @@
           {% endif %}
         </div>
         <div>
-          <label for="nama_instansi">Lokasi Vaksin:</label>
-          <select name="nama_instansi" id="nama_instansi">
+          <label for="lokasi_vaksin">Lokasi Vaksin:</label>
+          <select name="lokasi_vaksin" id="lokasi_vaksin">
             {% for lokasi in lokasi_records %} {% if lokasi.nama == selected.lokasi_vaksin %}
             <option selected value="{{lokasi.kode}}">{{lokasi.nama}}</option>
             {% else %}
@@ -88,14 +88,13 @@
         </div>
         <div>Status: Pengajuan dikirim</div>
         <br /><br />
-        <div class="flex justify-evenly w-full">
-          <div class="rounded-md bg-green-400 font-bold px-4 py-2">
-            Setujui Request
-          </div>
-          <div class="rounded-md bg-red-400 font-bold px-4 py-2">
-            Reject request
-          </div>
-        </div>
+        <p>Dengan ini saya :</p>
+        <input type="radio" id="html" name="setuju" value="YA" required>
+        <label for="html">MENYETUJUI request</label><br>
+        <input type="radio" id="css" name="setuju" value="TIDAK">
+        <label for="css">MENOLAK request</label><br>
+          <br>          
+          <button type="submit" class="px-6 py-2 border border-black rounded bg-green-300">Submit</button>
       </form>
     </div>
     {% comment %} end table {% endcomment %}

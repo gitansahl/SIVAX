@@ -14,7 +14,8 @@
     <h1 class="text-center text-2xl font-bold">‘Update Penjadwalan Vaksin’</h1>
     {% comment %} create table {% endcomment %}
     <div class="w-3/4 flex justify-center mx-auto py-32">
-      <form action="POST">
+      <form action="" method="POST">
+        {% csrf_token %}
         <div>
           <label for="nama_instansi">Nama Instansi:</label>
           <select name="nama_instansi" id="nama_instansi">

@@ -65,8 +65,8 @@
           {% endif %}
         </div>
         <div>
-          <label for="nama_instansi">Lokasi Vaksin:</label>
-          <select name="nama_instansi" id="nama_instansi">
+          <label for="lokasi_vaksin">Lokasi Vaksin:</label>
+          <select name="lokasi_vaksin" id="lokasi_vaksin">
             {% for lokasi in lokasi_records %} 
             {% if lokasi.nama == selected.lokasi_vaksin %}
             <option selected value="{{lokasi.kode}}">{{lokasi.nama}}</option>

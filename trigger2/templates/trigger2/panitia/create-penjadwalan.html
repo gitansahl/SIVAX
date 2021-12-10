@@ -14,8 +14,8 @@
     <h1 class="text-center text-2xl font-bold">‘Buat Penjadwalan Vaksin’</h1>
     {% comment %} create table {% endcomment %}
     <div class="w-3/4 flex justify-center mx-auto py-32">
-      <form action="POST">
-        <div>
+      <form action="" method="POST">
+        {% csrf_token %}        <div>
           <label for="nama_instansi">Pilih Instansi:</label>
           <select name="nama_instansi" id="nama_instansi">
             {% for instansi in instansi_records %}
@@ -45,8 +45,8 @@
           <label for="opsi2">Internal</label><br />
         </div>
         <div>
-          <label for="nama_instansi">Lokasi Vaksin:</label>
-          <select name="nama_instansi" id="nama_instansi">
+          <label for="lokasi_vaksin">Lokasi Vaksin:</label>
+          <select name="lokasi_vaksin" id="lokasi_vaksin">
             {% for lokasi in lokasi_records %}
             <option value="{{lokasi.kode}}">{{lokasi.nama}}</option>
             {% endfor %}

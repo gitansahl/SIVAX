@@ -16,8 +16,8 @@
     </h1>
     {% comment %} create table {% endcomment %}
     <div class="w-3/4 flex justify-center mx-auto pt-8">
-      <form action="POST">
-        <h3 class="text-lg font-bold">Informasi Penjadwalan</h3>
+      <form action="" method="POST">
+        {% csrf_token %}        <h3 class="text-lg font-bold">Informasi Penjadwalan</h3>
         <div class="mt-2">
           <label for="nama_instansi">Nama Instansi:</label>
           <select disabled name="nama_instansi" id="nama_instansi">
@@ -153,11 +153,11 @@
             {% for vaksin in vaksin_records %}
             
             {% if vaksin.nama == selected.jenis_vaksin %}
-              <option selected value="{{selected.jenis_vaksin}}">
+              <option selected value="{{selected.kode_vaksin}}">
               {{selected.jenis_vaksin}}
             </option>
             {% else %}
-              <option  value="{{vaksin.nama}}">
+              <option  value="{{vaksin.kode}}">
               {{vaksin.nama}}
             </option>
             {% endif %}
@@ -169,13 +169,16 @@
           <label for="jumlah_vaksin">Jumlah Vaksin:</label>
           <input type="number" id="jumlah_vaksin" value="{{selected.jumlah_vaksin}}" name="jumlah_vaksin" />
         </div>
+        <div class="flex justify-center gap-x-4 w-full my-8">
+          <button type="submit">
+            <div class="rounded-md bg-green-400 font-bold px-4 py-2">
+              Simpan Distribusi
+            </div>
+          </button>
+        </div>
       </form>
     </div>
-    <div class="flex justify-center gap-x-4 w-full my-8">
-      <div class="rounded-md bg-green-400 font-bold px-4 py-2">
-        Simpan Distribusi
-      </div>
-    </div>
+
     {% comment %} end table {% endcomment %}
   </body>
 </html>

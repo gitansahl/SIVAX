@@ -17,7 +17,9 @@ urlpatterns = [
     path('admin/distribusi',admin_distribusi_views.Distribusi.as_view(), name='admin-distribusi'),
     path('admin/distribusi/detail/<str:kode_distribusi>',admin_distribusi_views.DetailDistribusi.as_view(),name='admin-distribusi-detail'),
     path('admin/distribusi/update/<str:kode_distribusi>',admin_distribusi_views.UpdateDistribusi.as_view(),name='admin-distribusi-update'),
+    path('admin/distribusi/delete/<str:kode_distribusi>',admin_distribusi_views.deleteDistribusi,name='admin-distribusi-delete'),
     
     path('admin/vaksin',admin_vaksin_views.index, name='admin-vaksin'),
+    path('admin/vaksin/delete/<str:kode_vaksin>',admin_vaksin_views.deleteVaksin, name='admin-vaksin-delete'),
     path('admin/vaksin/update/<str:kode_vaksin>',admin_vaksin_views.UpdateStok.as_view(), name='admin-vaksin-update'),
 ]
