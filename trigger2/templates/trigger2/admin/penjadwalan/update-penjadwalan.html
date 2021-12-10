@@ -34,9 +34,9 @@
         <div>
           <label for="tanggal_waktu">tanggal waktu:</label>
           <input
-            type="date"
+            type="datetime-local"
             id="tanggal_waktu"
-            value="{{selected.waktu|slice:10}}"
+            value="{{selected.waktu|date:"c"}}"
             name="tanggal_waktu"
           />
         </div>

@@ -1,21 +1,11 @@
+from django.db import connection
 from django.http import response
 from django.http.response import Http404
 from django.shortcuts import render
 from datetime import datetime, date
 from django.views.generic.base import View
 from django.utils.text import slugify
-import json
-import os
-# dir_path = os.path.dirname(os.path.realpath(__file__))
-from trigger2.panitia_views import dir_path
-
-def getDummyData(filename):
-    try:
-        with open(dir_path+"/DummyData/"+filename) as json_file:
-            data = json.load(json_file)
-            return data
-    except:
-        return {}
+from trigger2.utils import getData
 
 def extractOnePenjadwalanData(datum):
     context ={}
@@ -48,7 +38,7 @@ def extractOneDistribusiData(datum):
 
 class Distribusi(View):
     def get(self, request):
-        data = getDummyData('distribusi.json')['data']
+        data = getData(connection, 'distribusi')
         response={}
         contexts = []
         for datum in data:
@@ -60,11 +50,11 @@ class Distribusi(View):
 class UpdateDistribusi(View):
     def get(self, request, *args, **kwargs):
         response={}
-        response['instansi_records'] = getDummyData('instansi.json')['data']
-        response['lokasi_records']= getDummyData('lokasi_vaksin.json')['data']
-        response['vaksin_records']=getDummyData('vaksin.json')['data']
+        response['instansi_records'] = getData(connection, 'instansi')
+        response['lokasi_records'] = getData(connection, 'lokasi')
+        response['vaksin_records'] = getData(connection, 'vaksin')
 
-        data = getDummyData('penjadwalan_v2.json')['data']
+        data = getData(connection, 'penjadwalan')
         kode_distribusi = kwargs['kode_distribusi']
         for datum in data:
             if datum['kode_distribusi'] == kode_distribusi:
@@ -76,11 +66,11 @@ class UpdateDistribusi(View):
 class DetailDistribusi(View):
     def get(self, request, *args, **kwargs):
         response={}
-        response['instansi_records'] = getDummyData('instansi.json')['data']
-        response['lokasi_records']= getDummyData('lokasi_vaksin.json')['data']
-        response['vaksin_records']=getDummyData('vaksin.json')['data']
+        response['instansi_records'] = getData(connection, 'instansi')
+        response['lokasi_records']= getData(connection, 'lokasi')
+        response['vaksin_records']=getData(connection, 'vaksin')
 
-        data = getDummyData('penjadwalan_v2.json')['data']
+        data = getData(connection, 'penjadwalan')
         kode_distribusi = kwargs['kode_distribusi']
         for datum in data:
             if datum['kode_distribusi'] == kode_distribusi:
@@ -92,14 +82,14 @@ class DetailDistribusi(View):
 class DistribusiPenjadwalan(View):
     def get(self, request, *args, **kwargs):
         response={}
-        response['instansi_records'] = getDummyData('instansi.json')['data']
-        response['lokasi_records']= getDummyData('lokasi_vaksin.json')['data']
-        response['vaksin_records']=getDummyData('vaksin.json')['data']
+        response['instansi_records'] = getData(connection, 'instansi')
+        response['lokasi_records'] = getData(connection, 'lokasi')
+        response['vaksin_records'] = getData(connection, 'vaksin')
 
-        data = getDummyData('penjadwalan_v2.json')['data']
-        tanggal = kwargs['tanggal'][0:10]
+        data = getData(connection, 'penjadwalan')
+        tanggal = kwargs['tanggal']
         for datum in data:
-            if datum['kode_instansi'] == kwargs['kode_instansi'] and tanggal in datum['tanggal_waktu']:
+            if datum['kode_instansi'] == kwargs['kode_instansi'] and tanggal == slugify(datum['tanggal_waktu']):
                 context = extractOnePenjadwalanData(datum)
         response['selected'] = context
 

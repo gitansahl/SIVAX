@@ -36,9 +36,9 @@
           <label for="tanggal_waktu">tanggal waktu:</label>
           <input
             disabled
-            type="date"
+            type="datetime-local"
             id="tanggal_waktu"
-            value="{{selected.waktu|slice:10}}"
+            value="{{selected.waktu|date:"c"}}"
             name="tanggal_waktu"
           />
         </div>
@@ -133,7 +133,7 @@
         
             type="date"
             id="tanggal_waktu_distribusi"
-            value="{{selected.tanggal_distribusi|slice:10}}"
+            value="{{selected.tanggal_distribusi|date:"c"}}"
             name="tanggal_waktu_distribusi"
           />
         </div>

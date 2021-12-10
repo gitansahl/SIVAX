@@ -11,7 +11,7 @@
     <title>Penjadwalan</title>
   </head>
   <body class="py-10 px-32 bg-purple-200">
-    <h1 class="text-center text-2xl font-bold">‘Update Penjadwalan Vaksin’</h1>
+    <h1 class="text-center text-2xl font-bold">Verifikasi Penjadwalan Vaksin’</h1>
     {% comment %} create table {% endcomment %}
     <div class="w-3/4 flex justify-center mx-auto py-32">
       <form action="POST">
@@ -32,9 +32,9 @@
         <div>
           <label for="tanggal_waktu">tanggal waktu:</label>
           <input
-            type="date"
+            type="datetime-local"
             id="tanggal_waktu"
-            value="{{selected.waktu|slice:10}}"
+            value="{{selected.waktu|date:"c"}}"
             name="tanggal_waktu"
           />
         </div>

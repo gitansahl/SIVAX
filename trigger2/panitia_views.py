@@ -1,19 +1,15 @@
-from django.http.response import Http404
+from django.http import response
+from django.http.response import Http404, HttpResponseRedirect
 from django.shortcuts import render
 from datetime import datetime, date
 from django.views.generic.base import View
 from django.utils.text import slugify
 import json
 import os 
+from django.urls import reverse, reverse_lazy
+from django.db import connection
+from .utils import getData
 dir_path = os.path.dirname(os.path.realpath(__file__))
-
-def getDummyData(filename):
-    try:
-        with open(dir_path+"/DummyData/"+filename) as json_file:
-            data = json.load(json_file)
-            return data
-    except:
-        return {}
 
 def extractOnePenjadwalanData(datum):
     context ={}
@@ -37,20 +33,21 @@ def extractOnePenjadwalanData(datum):
 
 def index(request):
     response = {}
-    data = getDummyData('penjadwalan_v2.json')['data']
+    data = getData(connection, "penjadwalan")
     contexts = []
     for datum in data:
         context = extractOnePenjadwalanData(datum)
+        print(slugify(context['waktu']))
         contexts.append(context)
     response['penjadwalan_records'] = contexts
     return render(request, 'trigger2/panitia/penjadwalan.html', response)
 
 class DetailPenjadwalan(View):
     def get(self, request, *args, **kwargs):
-        data = getDummyData('penjadwalan_v2.json')['data']
-        tanggal = kwargs['tanggal'][0:10]
+        data = getData(connection, "penjadwalan")
+        tanggal = kwargs['tanggal']
         for datum in data:
-            if datum['kode_instansi'] == kwargs['kode_instansi'] and tanggal in datum['tanggal_waktu']:
+            if datum['kode_instansi'] == kwargs['kode_instansi'] and tanggal == slugify(datum['tanggal_waktu']):
                 context = extractOnePenjadwalanData(datum)
         response = {}
         response['data'] = context
@@ -59,8 +56,10 @@ class DetailPenjadwalan(View):
 class CreatePenjadwalan(View):
     def get(self, request, *args, **kwargs):
         response={}
-        response['instansi_records'] = getDummyData('instansi.json')['data']
-        response['lokasi_records']= getDummyData('lokasi_vaksin.json')['data']
+        # response['instansi_records'] = getDummyData('instansi.json')['data']
+        response['instansi_records'] = getData(connection, "instansi")
+        # response['lokasi_records']= getDummyData('lokasi_vaksin.json')['data']
+        response['lokasi_records'] = getData(connection, "lokasi")
         # print(response['instansi_records'])
         print("HEY")
         # print(response['lokasi_records'])
@@ -69,14 +68,27 @@ class CreatePenjadwalan(View):
 class UpdatePenjadwalan(View):
     def get(self, request, *args, **kwargs):
         response={}
-        response['instansi_records'] = getDummyData('instansi.json')['data']
-        response['lokasi_records']= getDummyData('lokasi_vaksin.json')['data']
+        # response['instansi_records'] = getDummyData('instansi.json')['data']
+        response['instansi_records'] = getData(connection, "instansi")
+        # response['lokasi_records']= getDummyData('lokasi_vaksin.json')['data']
+        response['lokasi_records'] = getData(connection, "lokasi")
 
-        data = getDummyData('penjadwalan_v2.json')['data']
-        tanggal = kwargs['tanggal'][0:10]
+        data = getData(connection, "penjadwalan")
+        tanggal = kwargs['tanggal']
         for datum in data:
-            if datum['kode_instansi'] == kwargs['kode_instansi'] and tanggal in datum['tanggal_waktu']:
+            if datum['kode_instansi'] == kwargs['kode_instansi'] and tanggal == slugify(datum['tanggal_waktu']):
                 context = extractOnePenjadwalanData(datum)
         response['selected'] = context
 
         return render(request, 'trigger2/panitia/update-penjadwalan.html', response)
+    
+    def post(self, request, *args, **kwargs):
+        print(kwargs)
+        response={'hasError':False}
+        print(request.POST)
+        return HttpResponseRedirect(reverse('panitia-penjadwalan'))
+
+
+def resendWithError(request, path, message):
+    response = {'hasError': True, 'error': message}
+    return render(request, path, message)

@@ -12,7 +12,6 @@
       "jumlah_nakes": 4,
       "email_admin": "Waylin.Wickendon@gmail.com",
       "kode_distribusi": "dst01",
-    
       "tanggal": "2021-09-18",
       "biaya": 10000,
       "jumlah_vaksin": 931,
@@ -32,7 +31,6 @@
       "jumlah_nakes": 3,
       "email_admin": "Mirabelle.Hum@gmail.com",
       "kode_distribusi": "dst02",
-    
       "tanggal": "2021-05-27",
       "biaya": 15000,
       "jumlah_vaksin": 819,
@@ -52,7 +50,6 @@
       "jumlah_nakes": 5,
       "email_admin": "Daniel.Mattack@gmail.com",
       "kode_distribusi": "dst03",
-    
       "tanggal": "2021-04-24",
       "biaya": 100000,
       "jumlah_vaksin": 239,
@@ -72,7 +69,6 @@
       "jumlah_nakes": 3,
       "email_admin": "Lidia.Gaunt@gmail.com",
       "kode_distribusi": "dst04",
-    
       "tanggal": "2021-04-06",
       "biaya": 20000,
       "jumlah_vaksin": 782,
@@ -92,7 +88,6 @@
       "jumlah_nakes": 2,
       "email_admin": "Coleman.Scullard@gmail.com",
       "kode_distribusi": "dst05",
-    
       "tanggal": "2021-02-27",
       "biaya": 25000,
       "jumlah_vaksin": 540,
@@ -112,7 +107,6 @@
       "jumlah_nakes": 1,
       "email_admin": "Michell.Schapiro@gmail.com",
       "kode_distribusi": "dst06",
-    
       "tanggal": "2021-06-22",
       "biaya": 150000,
       "jumlah_vaksin": 754,
@@ -132,7 +126,6 @@
       "jumlah_nakes": 2,
       "email_admin": "Lura.Ditchburn@gmail.com",
       "kode_distribusi": "dst07",
-    
       "tanggal": "2021-06-14",
       "biaya": 200000,
       "jumlah_vaksin": 144,
@@ -152,7 +145,6 @@
       "jumlah_nakes": 2,
       "email_admin": "Danice.Ayshford@gmail.com",
       "kode_distribusi": "dst08",
-    
       "tanggal": "2021-02-26",
       "biaya": 300000,
       "jumlah_vaksin": 92,
@@ -172,7 +164,6 @@
       "jumlah_nakes": 1,
       "email_admin": "Rodd.McKinnon@gmail.com",
       "kode_distribusi": "dst09",
-    
       "tanggal": "2021-09-13",
       "biaya": 350000,
       "jumlah_vaksin": 514,
@@ -192,7 +183,6 @@
       "jumlah_nakes": 1,
       "email_admin": "Cherey.Milton@gmail.com",
       "kode_distribusi": "dst10",
-    
       "tanggal": "2021-07-22",
       "biaya": 100000,
       "jumlah_vaksin": 758,

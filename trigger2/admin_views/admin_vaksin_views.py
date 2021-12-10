@@ -1,19 +1,10 @@
+from django.db import connection
 from django.http.response import Http404
 from django.shortcuts import render
 from datetime import datetime, date
 from django.views.generic.base import View
 from django.utils.text import slugify
-import json
-from trigger2.panitia_views import dir_path
-
-
-def getDummyData(filename):
-    try:
-        with open(dir_path+"/DummyData/"+filename) as json_file:
-            data = json.load(json_file)
-            return data
-    except:
-        return {}
+from trigger2.utils import getData
 
 def extractOnePenjadwalanData(datum):
     context ={}
@@ -37,7 +28,7 @@ def extractOnePenjadwalanData(datum):
 
 def index(request):
     response = {}
-    data = getDummyData('vaksin.json')['data']
+    data = getData(connection, 'vaksin')
     contexts = []
     for datum in data:
         contexts.append(datum)
@@ -46,7 +37,7 @@ def index(request):
 
 class UpdateStok(View):
     def get(self, request, *args, **kwargs):
-        data = getDummyData('update_stok.json')['data']
+        data = getData(connection, 'update_stok')
         kode_vaksin = kwargs['kode_vaksin']
         response = {}
         contexts = []
@@ -54,7 +45,7 @@ class UpdateStok(View):
             if datum['kode_vaksin'].lower() == kode_vaksin.lower():
                 contexts.append(datum)
         response['update_stok_records'] = contexts
-        vaksin_records =  getDummyData('vaksin.json')['data']
+        vaksin_records =  getData(connection, 'vaksin')
         for vaksin in vaksin_records:
             if vaksin['kode'].lower() == kode_vaksin.lower():
                 response['nama_vaksin']= vaksin['nama']
