@@ -11,4 +11,5 @@ urlpatterns = [
     path('pengguna/penjadwalan/detail/(?P<instansi>[0-9]+)$/(?P<jadwal>[0-9]+)$', views.detail_jadwal, name='detail_jadwal'),
     path('pengguna/tiket/create/(?P<instansi>[0-9]+)$/(?P<jadwal>[0-9]+)$', views.create_tiket, name="create_tiket"),
     path('admin/vaksin/tambah_vaksin', views.tambah_vaksin, name="tambah_vaksin"),
+    path('admin/vaksin/delete/(?P<kode>[0-9]+)$', views.delete_vaksin, name="delete_vaksin"),
 ]
