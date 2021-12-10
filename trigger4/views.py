@@ -192,3 +192,15 @@ def tambah_vaksin(request):
                 messages.add_message(request, messages.WARNING, f"Sistem sedang tidak baik-baik saja, mohon coba lain waktu")
             cursor.execute("set search_path to public")
     return render(request, 'trigger4/admin/tambah_vaksin.html', context)
+
+def delete_vaksin(request, kode):
+    with connection.cursor() as cursor:
+        cursor.execute("SET search_path TO SIVAX")
+        try:
+            cursor.execute(f"""
+                           DELETE FROM VAKSIN
+                           WHERE kode = '{kode}'""")
+        except:
+            messages.add_message(request, messages.WARNING, f"Gagal menghapus Vaksin {kode}")
+            cursor.execute("SET search_path TO PUBLIC")
+        return redirect("trigger2:admin-vaksin")
