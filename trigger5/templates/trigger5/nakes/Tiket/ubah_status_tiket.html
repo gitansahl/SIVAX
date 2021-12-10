@@ -8,53 +8,25 @@
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <title>Tiket</title>
+    <title>Ubah Status Tiket</title>
   </head>
   <body class="py-10 px-32 bg-purple-200">
-    <h1 class="text-center text-2xl font-bold">Ubah Status Tiket</h1>
-    {% comment %} create table {% endcomment %}
-    <div class="w-3/4 flex justify-center mx-auto py-32 pt-16">
-      <form action="POST">
-        <div class="flex my-2">
-          <div>Nama Instansi:</div>
+    <h1 class="text-center text-2xl font-bold">Ubah Status Tiket</h1>  
+      <div class="centered">
+            <form id="formCreate" action="{% url 'ubah_status_tiket' %}" method="post">
+                {% csrf_token %} {{form.as_p}}
+                <button type="submit" class="bg-red-400 text-white font-bold px-8 py-3" > Update </button>
+            </form>
 
         </div>
-        <div class="flex my-2">
-          <div>Tanggal dan waktu pelaksanaan:</div>
 
-        </div>
-        <div class="flex my-2">
-          <div>Kuota:</div>
 
-        </div>
-        <div class="flex my-2">
-          <div>Kategori Penerima:</div>
-
-        </div>
-        <div class="flex my-2">
-          <div>Lokasi Vaksin:</div>
-
-        </div>
-        <div class="flex my-2">
-          <div>Nomor Tiket:</div>
-
-        </div>
-        <div class="flex my-2">
-          <div>Status Tiket:</div>
-
-          <label for="stat">Choose a status:</label>
-
-        <select name="stat" id="stats">
-          <option value="Terdaftar">Terdaftar</option>
-          <option value="Siap Vaksin">Siap Vaksin</option>
-          <option value="Tidak lolos screening">tidak lolos screening</option>
-          <option value="selesai vaksin">selesai vaksin</option>
-        </select>
-        </div>
-
-        <br /><br />
-      </form>
-    </div>
-    {% comment %} end table {% endcomment %}
   </body>
+  <style>
+    #id_status_tiket_detail,
+    label[for="id_status_tiket_detail"] {
+        display: none
+    }
+</style>
 </html>
+
