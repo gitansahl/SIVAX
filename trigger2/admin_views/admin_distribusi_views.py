@@ -1,6 +1,6 @@
 from django.db import connection
 from django.http import response
-from django.http.response import Http404, HttpResponseRedirect
+from django.http.response import Http404, HttpResponseForbidden, HttpResponseRedirect
 from django.shortcuts import render
 from datetime import datetime, date
 from django.urls.base import reverse
@@ -46,6 +46,11 @@ def deleteDistribusi(request, kode_distribusi):
 
 class Distribusi(View):
     def get(self, request):
+        if(request.session.get('role')):
+            if("admin" not in request.session.get('role')):
+                return HttpResponseForbidden()
+        else:
+            return HttpResponseForbidden()
         data = getData(connection, 'distribusi')
         response={}
         contexts = []
@@ -57,6 +62,11 @@ class Distribusi(View):
 
 class UpdateDistribusi(View):
     def get(self, request, *args, **kwargs):
+        if(request.session.get('role')):
+            if("admin" not in request.session.get('role')):
+                return HttpResponseForbidden()
+        else:
+            return HttpResponseForbidden()
         response={}
         response['instansi_records'] = getData(connection, 'instansi')
         response['lokasi_records'] = getData(connection, 'lokasi')
@@ -85,6 +95,11 @@ class UpdateDistribusi(View):
 
 class DetailDistribusi(View):
     def get(self, request, *args, **kwargs):
+        if(request.session.get('role')):
+            if("admin" not in request.session.get('role')):
+                return HttpResponseForbidden()
+        else:
+            return HttpResponseForbidden()
         response={}
         response['instansi_records'] = getData(connection, 'instansi')
         response['lokasi_records']= getData(connection, 'lokasi')
@@ -101,6 +116,11 @@ class DetailDistribusi(View):
 
 class DistribusiPenjadwalan(View):
     def get(self, request, *args, **kwargs):
+        if(request.session.get('role')):
+            if("admin" not in request.session.get('role')):
+                return HttpResponseForbidden()
+        else:
+            return HttpResponseForbidden()
         response={}
         response['instansi_records'] = getData(connection, 'instansi')
         response['lokasi_records'] = getData(connection, 'lokasi')
@@ -126,3 +146,10 @@ class DistribusiPenjadwalan(View):
             )
             print("test")
         return HttpResponseRedirect(reverse('admin-distribusi'))
+    
+def verify(request):
+    if(request.session.get('role')):
+        if("admin" not in request.session.get('role')):
+            return HttpResponseForbidden()
+    else:
+        return HttpResponseForbidden()

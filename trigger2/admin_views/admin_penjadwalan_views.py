@@ -1,5 +1,5 @@
 from django.db import connection
-from django.http.response import Http404, HttpResponseRedirect
+from django.http.response import Http404, HttpResponseForbidden, HttpResponseRedirect
 from django.shortcuts import render
 from datetime import datetime, date
 from django.urls.base import reverse
@@ -30,6 +30,11 @@ def extractOnePenjadwalanData(datum):
     return context
 
 def index(request):
+    if(request.session.get('role')):
+        if("admin" not in request.session.get('role')):
+            return HttpResponseForbidden()
+    else:
+        return HttpResponseForbidden()
     response = {}
     data = getData(connection, 'penjadwalan')
     contexts = []
@@ -41,6 +46,11 @@ def index(request):
 
 class DetailPenjadwalan(View):
     def get(self, request, *args, **kwargs):
+        if(request.session.get('role')):
+            if("admin" not in request.session.get('role')):
+                return HttpResponseForbidden()
+        else:
+            return HttpResponseForbidden()
         data = getData(connection, 'penjadwalan')
         tanggal = kwargs['tanggal']
         for datum in data:
@@ -53,6 +63,11 @@ class DetailPenjadwalan(View):
 
 class UpdatePenjadwalan(View):
     def get(self, request, *args, **kwargs):
+        if(request.session.get('role')):
+            if("admin" not in request.session.get('role')):
+                return HttpResponseForbidden()
+        else:
+            return HttpResponseForbidden()
         response={}
         response['instansi_records'] = getData(connection, 'instansi')
         response['lokasi_records']= getData(connection, 'lokasi')
@@ -68,6 +83,11 @@ class UpdatePenjadwalan(View):
 
 class VerifikasiPenjadwalan(View):
     def get(self, request, *args, **kwargs):
+        if(request.session.get('role')):
+            if("admin" not in request.session.get('role')):
+                return HttpResponseForbidden()
+        else:
+            return HttpResponseForbidden()
         response={}
         response['instansi_records'] = getData(connection, 'instansi')
         response['lokasi_records']= getData(connection, 'lokasi')

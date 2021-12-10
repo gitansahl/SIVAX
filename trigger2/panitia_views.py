@@ -1,5 +1,5 @@
 from django.http import response
-from django.http.response import Http404, HttpResponseRedirect
+from django.http.response import Http404, HttpResponseForbidden, HttpResponseRedirect
 from django.shortcuts import render
 from datetime import datetime, date
 from django.views.generic.base import View
@@ -32,6 +32,11 @@ def extractOnePenjadwalanData(datum):
     return context
 
 def index(request):
+    if(request.session.get('role')):
+        if("panitia" not in request.session.get('role')):
+            return HttpResponseForbidden()
+    else:
+        return HttpResponseForbidden()
     response = {}
     data = getData(connection, "penjadwalan")
     contexts = []
