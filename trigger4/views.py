@@ -25,22 +25,20 @@ def create_tiket(request, instansi, jadwal):
                        WHERE nama_instansi = '{instansi}'""")
         kode_instansi = cursor.fetchall()[0][0]
         cursor.execute("""
-                       SELECT no_tiket
+                       SELECT COUNT(*)
                        FROM TIKET
-                       ORDER BY no_tiket DESC
-                       LIMIT 1
                        """)
         data_no_tiket = cursor.fetchall()[0][0]
-        no_tiket = data_no_tiket[:4] + str(int(data_no_tiket[4:])+1)
+        no_tiket = 'tkt0' + str(data_no_tiket+1)
         try:
             cursor.execute(f"""
-                           INSERT INTO TIKET(email, no_tiket, kode_instansi, tgl_waktu) VALUES
-                           ('{email}', '{no_tiket}', '{kode_instansi}', '{jadwal}')""")
+                           INSERT INTO TIKET(email, no_tiket, kode_instansi, kode_status, tgl_waktu) VALUES
+                           ('{email}', '{no_tiket}', '{kode_instansi}', 01, '{jadwal}')""")
         except:
             messages.add_message(request, messages.WARNING, "Anda sudah vaksin dosis ke-2 atau vaksin dosis pertama Anda masih dalam rentang waktu 14 hari ke belakang")
             return redirect("detail_jadwal", instansi, jadwal)
         cursor.execute("SET search_path to public")
-    return redirect("daftar_jadwal_terdaftar")
+    return redirect("trigger4:daftar_jadwal_terdaftar")
 
 def detail_jadwal(request, instansi, jadwal):
     with connection.cursor() as cursor:
@@ -71,7 +69,7 @@ def detail_jadwal(request, instansi, jadwal):
             'kategori' : penjadwalan[3],
             'nama_lokasi' : lokasi_vaksin,
         }
-        cursor.execute("set SERCH_PATH TO PUBLIC")
+        cursor.execute("set search_path TO PUBLIC")
     return render(request, 'trigger4/pengguna/detail_jadwal.html', context)
 
 def daftar_jadwal_terdaftar(request):
@@ -87,13 +85,13 @@ def daftar_jadwal_terdaftar(request):
         jadwal = cursor.fetchall()
         
         for i in range(len(jadwal)):
-            cursor.execute(f"""
-                           SELECT nama_instansi
+            cursor.execute("""
+                           SELECT *
                            FROM INSTANSI
-                           WHERE kode = '{jadwal[i][0]}'""")
-            nama_instansi = cursor.fetchall()[0][0]
+                           WHERE kode = %s""", [jadwal[i][0]])
+            instansi = cursor.fetchall()
             context['jadwal_vaksinasi'].append([
-                nama_instansi, jadwal[i][1], jadwal[i][2]
+                instansi[0][1], jadwal[i][1], jadwal[i][2]
             ])
         cursor.execute("SET search_path TO PUBLIC")
     return render(request, 'trigger4/pengguna/daftar_jadwal_terdaftar.html', context )
@@ -139,7 +137,7 @@ def detail_tiket(request, instansi, jadwal, nomor, status):
         cursor.execute(f"""
                        SELECT *
                        FROM PENJADWALAN
-                       WHERE kode_instansi = '{kode_instansi}' AND taggal_waktu = '{jadwal}'
+                       WHERE kode_instansi = '{kode_instansi}' AND tanggal_waktu = '{jadwal}'
                        """)
         penjadwalan = cursor.fetchall()[0]
         cursor.execute(f"""
@@ -162,18 +160,21 @@ def detail_tiket(request, instansi, jadwal, nomor, status):
     return render(request, 'trigger4/pengguna/detail_tiket.html', context)
 
 def tambah_vaksin(request):
-    if request.session.get('roles') != 'admin':
-        return redirect()
+    is_admin = False
+    for i in request.session.get('roles'):
+        if i == 'admin':
+            is_admin = True
+    if is_admin == False:
+        return redirect("main:distribusi_tugas")
     
     context = dict()
     with connection.cursor() as cursor:
         cursor.execute("SET search_path to SIVAX")
-        cursor.execute("""SELECT kode
+        cursor.execute("""SELECT COUNT(*)
                        FROM VAKSIN
-                       ORDER BY kode DESC
-                       LIMIT 1""")
-        data_kode = cursor.fetchall()
-        kode_vaksin = data_kode[0:4] + str(int(data_kode[4:])+1)
+                       """)
+        data_kode = cursor.fetchall()[0][0]
+        kode_vaksin = 'vcn0' + str(data_kode+1)
         context['kode_vaksin'] = kode_vaksin
         cursor.execute("SET search_path to public")
     
@@ -186,7 +187,7 @@ def tambah_vaksin(request):
                                ('{kode_vaksin}', '{request.POST["nama_vaksin"]}', '{request.POST["produsen"]}',
                                '{request.POST["no_edar"]}', '{request.POST["stok"]}', '{request.POST["frekuensi"]}')
                                """)
-                return redirect()
+                return redirect("trigger2:admin-vaksin")
             except:
                 messages.add_message(request, messages.WARNING, f"Sistem sedang tidak baik-baik saja, mohon coba lain waktu")
             cursor.execute("set search_path to public")
