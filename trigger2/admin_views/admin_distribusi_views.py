@@ -46,8 +46,8 @@ def deleteDistribusi(request, kode_distribusi):
 
 class Distribusi(View):
     def get(self, request):
-        if(request.session.get('role')):
-            if("admin" not in request.session.get('role')):
+        if(request.session.get('roles')):
+            if("admin" not in request.session.get('roles')):
                 return HttpResponseForbidden()
         else:
             return HttpResponseForbidden()
@@ -62,8 +62,8 @@ class Distribusi(View):
 
 class UpdateDistribusi(View):
     def get(self, request, *args, **kwargs):
-        if(request.session.get('role')):
-            if("admin" not in request.session.get('role')):
+        if(request.session.get('roles')):
+            if("admin" not in request.session.get('roles')):
                 return HttpResponseForbidden()
         else:
             return HttpResponseForbidden()
@@ -95,8 +95,8 @@ class UpdateDistribusi(View):
 
 class DetailDistribusi(View):
     def get(self, request, *args, **kwargs):
-        if(request.session.get('role')):
-            if("admin" not in request.session.get('role')):
+        if(request.session.get('roles')):
+            if("admin" not in request.session.get('roles')):
                 return HttpResponseForbidden()
         else:
             return HttpResponseForbidden()
@@ -116,8 +116,8 @@ class DetailDistribusi(View):
 
 class DistribusiPenjadwalan(View):
     def get(self, request, *args, **kwargs):
-        if(request.session.get('role')):
-            if("admin" not in request.session.get('role')):
+        if(request.session.get('roles')):
+            if("admin" not in request.session.get('roles')):
                 return HttpResponseForbidden()
         else:
             return HttpResponseForbidden()
@@ -148,8 +148,8 @@ class DistribusiPenjadwalan(View):
         return HttpResponseRedirect(reverse('admin-distribusi'))
     
 def verify(request):
-    if(request.session.get('role')):
-        if("admin" not in request.session.get('role')):
+    if(request.session.get('roles')):
+        if("admin" not in request.session.get('roles')):
             return HttpResponseForbidden()
     else:
         return HttpResponseForbidden()

@@ -32,8 +32,8 @@ def extractOnePenjadwalanData(datum):
     return context
 
 def index(request):
-    if(request.session.get('role')):
-        if("panitia" not in request.session.get('role')):
+    if(request.session.get('roles')):
+        if("panitia" not in request.session.get('roles')):
             return HttpResponseForbidden()
     else:
         return HttpResponseForbidden()

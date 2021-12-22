@@ -34,8 +34,8 @@ def deleteVaksin(request, kode_vaksin):
     return HttpResponseRedirect(reverse('admin-vaksin'))
 
 def index(request):
-    if(request.session.get('role')):
-        if("admin" not in request.session.get('role')):
+    if(request.session.get('roles')):
+        if("admin" not in request.session.get('roles')):
             return HttpResponseForbidden()
     else:
         return HttpResponseForbidden()

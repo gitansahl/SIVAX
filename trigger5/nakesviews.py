@@ -80,7 +80,6 @@ def read(request):
             cursor.execute(
                 f"SELECT no_tiket, nama_lengkap, tgl_waktu, nama_status FROM SIVAX.TIKET T, SIVAX.WARGA W, SIVAX.STATUS_TIKET ST, SIVAX.PENJADWALAN P WHERE T.email = W.email AND T.kode_status = ST.kode AND T.tgl_waktu = P.tanggal_waktu AND P.kode_instansi = '{kode_instansi[0]}'")
             hasil_tiket = namedtuplefetchall(cursor)
-            print(hasil_tiket[0][0])
             response['tiket_vaksin'] = hasil_tiket
     return render(request, 'trigger5/nakes/Tiket/tiket_vaksin.html', response)
 

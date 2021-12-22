@@ -30,8 +30,8 @@ def extractOnePenjadwalanData(datum):
     return context
 
 def index(request):
-    if(request.session.get('role')):
-        if("admin" not in request.session.get('role')):
+    if(request.session.get('roles')):
+        if("admin" not in request.session.get('roles')):
             return HttpResponseForbidden()
     else:
         return HttpResponseForbidden()
@@ -46,8 +46,8 @@ def index(request):
 
 class DetailPenjadwalan(View):
     def get(self, request, *args, **kwargs):
-        if(request.session.get('role')):
-            if("admin" not in request.session.get('role')):
+        if(request.session.get('roles')):
+            if("admin" not in request.session.get('roles')):
                 return HttpResponseForbidden()
         else:
             return HttpResponseForbidden()
@@ -63,8 +63,8 @@ class DetailPenjadwalan(View):
 
 class UpdatePenjadwalan(View):
     def get(self, request, *args, **kwargs):
-        if(request.session.get('role')):
-            if("admin" not in request.session.get('role')):
+        if(request.session.get('roles')):
+            if("admin" not in request.session.get('roles')):
                 return HttpResponseForbidden()
         else:
             return HttpResponseForbidden()
@@ -83,8 +83,8 @@ class UpdatePenjadwalan(View):
 
 class VerifikasiPenjadwalan(View):
     def get(self, request, *args, **kwargs):
-        if(request.session.get('role')):
-            if("admin" not in request.session.get('role')):
+        if(request.session.get('roles')):
+            if("admin" not in request.session.get('roles')):
                 return HttpResponseForbidden()
         else:
             return HttpResponseForbidden()
